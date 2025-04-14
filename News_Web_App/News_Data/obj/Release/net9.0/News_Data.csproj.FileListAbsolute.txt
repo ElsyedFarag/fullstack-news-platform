@@ -1,0 +1,17 @@
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Data\bin\Release\net9.0\News_Data.deps.json
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Data\bin\Release\net9.0\News_Data.runtimeconfig.json
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Data\bin\Release\net9.0\News_Data.dll
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Data\bin\Release\net9.0\News_Data.pdb
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Data\bin\Release\net9.0\News_Models.dll
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Data\bin\Release\net9.0\News_Models.pdb
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Data\obj\Release\net9.0\News_Data.csproj.AssemblyReference.cache
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Data\obj\Release\net9.0\News_Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Data\obj\Release\net9.0\News_Data.AssemblyInfoInputs.cache
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Data\obj\Release\net9.0\News_Data.AssemblyInfo.cs
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Data\obj\Release\net9.0\News_Data.csproj.CoreCompileInputs.cache
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Data\obj\Release\net9.0\News_Data.csproj.Up2Date
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Data\obj\Release\net9.0\News_Data.dll
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Data\obj\Release\net9.0\refint\News_Data.dll
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Data\obj\Release\net9.0\News_Data.pdb
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Data\obj\Release\net9.0\News_Data.genruntimeconfig.cache
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Data\obj\Release\net9.0\ref\News_Data.dll

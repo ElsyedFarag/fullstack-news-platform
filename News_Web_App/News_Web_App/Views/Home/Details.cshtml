@@ -1,0 +1,534 @@
+﻿@using Microsoft.AspNetCore.Http.Extensions
+@model News_Models.Model.News
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .interaction-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        font-size: 1.1rem;
+        color: #444;
+        border-top: 2px solid #eee;
+        padding-top: 20px;
+    }
+
+        .interaction-section div {
+            display: flex;
+            align-items: center;
+        }
+
+        .interaction-section .icon {
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+
+        .interaction-section .likes-btn {
+            display: flex;
+            align-items: center;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            .interaction-section .likes-btn:hover {
+                background-color: #0056b3;
+            }
+
+            .interaction-section .likes-btn span {
+                margin-left: 5px;
+            }
+
+        .interaction-section .stat {
+            font-weight: bold;
+        }
+
+            .interaction-section .stat .count {
+                font-size: 1.2rem;
+                color: #f1c40f; /* اللون الأصفر ليتناسب مع التصميم */
+            }
+
+    .news-detail {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: end;
+    }
+
+    .news-detail-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .news-detail-meta {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .news-detail-content {
+        max-height: 100px;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        margin-top: 20px;
+    }
+
+        .news-detail-content.expanded {
+            max-height: 1000px;
+        }
+
+    .read-more {
+        display: block;
+        color: #f1c40f; /* اللون الأصفر ليتناسب مع التصميم */
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .news-detail-video {
+        margin-top: 30px;
+        border-radius: 8px; /* إضفاء شكل دائري على الزوايا */
+        overflow: hidden; /* إخفاء أي جزء خارج الحدود */
+        background-color: #333; /* خلفية داكنة تتناسق مع الموضوع */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* تأثير الظل لإضفاء تأثير ثلاثي الأبعاد */
+        padding: 10px;
+    }
+
+        .news-detail-video video {
+            width: 100%; /* ليتناسب مع عرض الحاوية */
+            height: auto; /* للحفاظ على نسبة العرض والارتفاع */
+            border-radius: 8px; /* إضافة شكل دائري للفيديو */
+        }
+
+    .no-video-message {
+        text-align: center;
+        font-size: larger;
+        color: #f1c40f; /* اللون الأصفر ليتناسب مع التصميم */
+    }
+
+    .comment-box strong {
+        font-size: 1.1rem;
+    }
+
+
+    /* تصميم الـ Dark Mode مع ألوان متناسقة مع الأصفر والأسود */
+    .comments-section {
+        background-color: #1a1a1a; /* خلفية داكنة (أسود) */
+        color: #f4f4f4; /* لون النص الفاتح */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        text-align: right; /* محاذاة النصوص إلى اليمين */
+        direction: rtl; /* تحديد الاتجاه من اليمين لليسار */
+    }
+
+        .comments-section h4 {
+            font-size: 1.5rem;
+            color: #f1c40f; /* لون الأصفر للعناوين */
+            margin-bottom: 15px;
+        }
+
+    .comment-form {
+        background-color: #2c2f36; /* خلفية داكنة للنموذج */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        margin-bottom: 30px;
+    }
+
+    .comment-input {
+        background-color: #333; /* خلفية داكنة لحقل الإدخال */
+        border-radius: 8px;
+        border: 1px solid #555; /* حدود داكنة */
+        padding: 10px;
+        font-size: 1rem;
+        color: #f4f4f4; /* لون النص داخل الحقول */
+    }
+
+        .comment-input:focus {
+            border-color: #f1c40f; /* تغيير اللون عند التركيز إلى الأصفر */
+            box-shadow: 0 0 5px rgba(241, 196, 15, 0.5);
+        }
+
+    .submit-comment-btn {
+        background-color: #f1c40f; /* خلفية الزر الأصفر */
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 1rem;
+    }
+
+        .submit-comment-btn:hover {
+            background-color: #e0b90f; /* تغيير اللون عند المرور بالفأرة */
+        }
+
+    .comments-list {
+        margin-top: 30px;
+    }
+
+    .comment-box {
+        background-color: #2c2f36; /* خلفية داكنة للتعليقات */
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .comment-header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.1rem;
+        color: #f4f4f4; /* لون النص */
+        margin-bottom: 10px;
+    }
+
+    .comment-img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .comment-box {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .comment-date {
+        font-size: 0.9rem;
+        color: #bbb; /* لون تاريخ التعليق */
+    }
+
+    .comment-box p {
+        font-size: 1rem;
+        color: #f4f4f4; /* لون النص داخل التعليق */
+    }
+
+    .text-muted {
+        color: #aaa !important; /* تغيير اللون الرمادي النصوص المطفأة */
+    }
+
+    .social-share-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .social-btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 5px 10px;
+        background-color: #f1f1f1;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        text-decoration: none;
+        color: rgba(241, 196, 15, 1);
+        transition: background-color 0.3s;
+    }
+
+        .social-btn:hover {
+            background-color: #f1c40f;
+            color: #fff;
+        }
+
+    .facebook-btn i {
+        margin-right: 5px;
+    }
+
+    .twitter-btn i {
+        margin-right: 5px;
+    }
+
+    .whatsapp-btn i {
+        margin-right: 5px;
+    }
+</style>
+
+<article class="news-detail">
+
+    <div class="header">
+        <h3 class="news-detail-title">@Model.Title</h3>
+
+        <div class="news-detail-meta">
+            <span>بواسطة: <strong>@Model.Author</strong></span> |
+            <span>تاريخ النشر: @Model.Created.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("ar-AE"))</span>
+        </div>
+
+
+
+        <div class="news-detail-content">
+            <p>@Model.Description</p>
+        </div>
+        <span class="read-more" onclick="toggleReadMore()">عرض المزيد</span>
+    </div>
+
+
+
+    <div class="news-detail-video" style="width:100%;">
+        @if (!string.IsNullOrEmpty(Model.VideoFile))
+        {
+            <video controls>
+                <source src="@Model.VideoFile" type="video/mp4">
+                متصفحك لا يدعم تشغيل الفيديو.
+            </video>
+        }
+        else
+        {
+            <p class="no-video-message">لا يوجد فيديو للعرض.</p>
+        }
+    </div>
+
+    <div class="interaction-section">
+        <div>
+            <span class="stat">مشاهدة: <span class="count">@(Model.ViewCount)</span></span>
+            <i class="fa-solid fa-eye" style="margin: 10px;"></i>
+        </div>
+        <div>
+            <span class="stat">تعليقات: <span class="count" id="countComment">@(Model.Comments?.Count ?? 0)</span></span>
+            <i class="fas fa-comment-dots" style="margin: 10px;"></i>
+        </div>
+        <div>
+            <button id="like-btn" class="likes-btn">
+                <span><i class="fa-solid fa-thumbs-up"></i></span> 
+                <span id="like-count">@Model.Likes</span>
+            </button>
+        </div>
+
+    </div>
+    <!-- إضافة ميزات المشاركة -->
+    <div class="share-section" style = "
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        margin-top: 15px;">
+       
+        <div class="social-share-buttons">
+            <!-- مشاركة على فيسبوك -->
+            <a href="@($"https://www.facebook.com/sharer/sharer.php?u={Uri.EscapeDataString(Context.Request.GetEncodedUrl())}")" target="_blank" class="social-btn facebook-btn">
+                <i class="fa-brands fa-facebook"></i> فيسبوك
+            </a>
+            <!-- مشاركة على تويتر -->
+            <a href="@($"https://twitter.com/intent/tweet?url={Uri.EscapeDataString(Context.Request.GetEncodedUrl())}&text=Check%20this%20out!")" target="_blank" class="social-btn twitter-btn">
+                <i class="fa-brands fa-twitter"></i> تويتر
+            </a>
+            <!-- مشاركة على واتساب -->
+            <a href="@($"https://api.whatsapp.com/send?text={Uri.EscapeDataString(Context.Request.GetEncodedUrl())}")" target="_blank" class="social-btn whatsapp-btn">
+                <i class="fa-brands fa-whatsapp"></i> واتساب
+            </a>
+        </div>
+        <div class="stat">
+            مشاركة<i class="fa-solid fa-paperclip" style="margin: 10px;"></i></>
+        </div>
+
+    </div>
+    <section class="mt-5 comments-section">
+        <div style="display: flex;
+             justify-content: space-between;
+             align-items: center;">
+            <button id="showCommentFormBtn" class="btn btn-outline-secondary mb-3">
+                إضافة تعليق
+                <i class="fas fa-plus" id="viewplus"></i>
+            </button>
+            <h4><i class="fas fa-comment-dots"></i> التعليقات</h4>
+        </div>
+
+        <form id="commentForm" method="post" asp-action="AddComment" class="comment-form d-none">
+            <input type="hidden" name="NewsId" value="@Model.Id" />
+            <div class="mb-2">
+                <input type="text" name="Author" id="commentAuthor" class="form-control comment-input" placeholder="اسمك" required />
+            </div>
+            <div class="mb-2">
+                <textarea name="Content" id="commentContent" class="form-control comment-input" placeholder="اكتب تعليقك..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary submit-comment-btn">إرسال</button>
+        </form>
+
+        <!-- عرض التعليقات -->
+        <div class="comments-list">
+            @if (Model.Comments != null && Model.Comments.Any())
+            {
+                foreach (var comment in Model.Comments)
+                {
+                    <div class="comment-box d-flex align-items-start mb-3">
+                        <img src="~/img/icons8-user-64.png" alt="صورة المستخدم" class="comment-img rounded-circle me-2" width="50" height="50" />
+                        <div class="w-100">
+                            <div class="comment-header d-flex justify-content-between">
+                                <strong>@comment.Author</strong>
+                                <span class="comment-date">@comment.CreatedAt.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("ar-AE"))</span>
+                            </div>
+                            <p>@comment.Content</p>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="text-muted text-center" id="empty">لا توجد تعليقات حتى الآن.</p>
+            }
+        </div>
+
+    </section>
+</article>
+
+<script>
+    document.getElementById("showCommentFormBtn").addEventListener("click", function () {
+        const form = document.getElementById("commentForm");
+        form.classList.toggle("d-none"); // يظهر أو يخفي النموذج
+
+        let icon = document.getElementById('viewplus');
+
+        // التحقق مما إذا كان النموذج ظاهرًا أو مخفيًا
+        if (form.classList.contains("d-none")) {
+            // إزالة الأيقونة السابقة ثم إضافة الأيقونة الجديدة
+            icon.classList.remove("fas", "fa-minus");
+            icon.classList.add("fas", "fa-plus");
+        } else {
+            // إزالة الأيقونة السابقة ثم إضافة الأيقونة الجديدة
+            icon.classList.remove("fas", "fa-plus");
+            icon.classList.add("fas", "fa-minus");
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        let content = document.querySelector(".news-detail-content");
+        let readMoreBtn = document.querySelector(".read-more");
+
+        if (content.scrollHeight > content.clientHeight) {
+            readMoreBtn.style.display = "block";
+        }
+    });
+
+    function toggleReadMore() {
+        let content = document.querySelector(".news-detail-content");
+        let readMoreBtn = document.querySelector(".read-more");
+
+        content.classList.toggle("expanded");
+
+        if (content.classList.contains("expanded")) {
+            readMoreBtn.textContent = "عرض أقل";
+        } else {
+            readMoreBtn.textContent = "عرض المزيد";
+        }
+    }
+
+       let isLiked = localStorage.getItem(`liked_${@Model.Id}`) === 'true'; // التحقق من حالة الإعجاب المخزنة في LocalStorage
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const likeButton = document.getElementById("like-btn");
+        const likeCountElement = document.getElementById("like-count");
+
+        if (isLiked) {
+            likeButton.classList.add('liked'); // إضافة فئة لتمييز حالة الإعجاب
+        }
+
+        likeButton.addEventListener("click", function () {
+            toggleLikeNews(@Model.Id, likeButton, likeCountElement);
+        });
+    });
+
+    function toggleLikeNews(newsId, likeButton, likeCountElement) {
+        if (isLiked) {
+            // إذا كان المستخدم قد أعجب بالفعل، قم بإزالة الإعجاب
+            fetch(`/Home/Unlike/${newsId}`, { method: 'POST' })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        isLiked = false; // تحديث الحالة إلى "غير معجب"
+                        localStorage.setItem(`liked_${newsId}`, 'false'); // حفظ الحالة في LocalStorage
+                        likeCountElement.textContent = data.likes;
+                        likeButton.classList.remove('liked');
+                    }
+                });
+        } else {
+            // إذا لم يكن قد أعجب، قم بإضافة الإعجاب
+            fetch(`/Home/Like/${newsId}`, { method: 'POST' })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        isLiked = true; // تحديث الحالة إلى "معجب"
+                        localStorage.setItem(`liked_${newsId}`, 'true'); // حفظ الحالة في LocalStorage
+                        likeCountElement.textContent = data.likes;
+                        likeButton.classList.add('liked');
+                    }
+                });
+        }
+    }
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const commentForm = document.getElementById("commentForm");
+        const commentsList = document.querySelector(".comments-list");
+
+        commentForm.addEventListener("submit", function (event) {
+            event.preventDefault(); // منع إعادة تحميل الصفحة
+
+            const author = document.getElementById("commentAuthor").value;
+            const content = document.getElementById("commentContent").value;
+            const newsId = document.querySelector("input[name='NewsId']").value;
+            const CountComment = document.getElementById("countComment");
+
+            // إرسال بيانات التعليق إلى الخادم باستخدام AJAX
+            fetch(`/Home/AddComment`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    NewsId: newsId,
+                    Author: author,
+                    Content: content
+                })
+            })
+            .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            const comment = data.comment;
+            console.log(data.comment);
+            const commentBox = document.createElement("div");
+            commentBox.classList.add("comment-box");
+            commentBox.classList.add("d-flex");
+            commentBox.classList.add("align-items-start");
+            commentBox.classList.add("mb-3");
+
+               commentBox.innerHTML = `
+                        <img src='/img/icons8-user-64.png' alt="صورة المستخدم" class="comment-img rounded-circle me-2" width="50" height="50" />
+                        <div class="w-100">
+                            <div class="comment-header d-flex justify-content-between">
+                                <strong>${data.comment.author}</strong>
+                                <span class="comment-date">${data.comment.createdAt}</span>
+                            </div>
+                            <p>${data.comment.content}</p>
+                        </div>
+                        `;
+            CountComment.Text = '';
+            CountComment.innerHTML = `${data.comment.countComment}`;
+
+            commentsList.insertBefore(commentBox, commentsList.firstChild);
+            if(document.getElementById('empty') != null)
+                   document.querySelector(".text-muted").remove();
+
+            document.getElementById("commentAuthor").value = "";
+            document.getElementById("commentContent").value = "";
+        } else {
+            alert("حدث خطأ أثناء إضافة التعليق.");
+        }
+    })
+
+            .catch(error => {
+                console.error('Error:', error);
+                alert("حدث خطأ أثناء إضافة التعليق.");
+            });
+        });
+    });
+
+</script>

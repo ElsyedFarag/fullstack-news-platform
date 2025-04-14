@@ -1,0 +1,103 @@
+﻿@model News_Models.Model.Message
+
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+
+    /* Contact Form Styles */
+    .contact-form {
+        background-color: #1a1a2e;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 600px;
+        
+        margin: 40px auto; /* توسيط النموذج */
+        direction: rtl; /* جعل النص يبدأ من اليمين */
+    }
+
+        .contact-form h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: right; /* محاذاة العنوان إلى اليمين */
+        }
+
+    .form-group {
+        margin-bottom: 15px;
+        text-align: right; /* محاذاة النص إلى اليمين */
+    }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            text-align: right; /* محاذاة النص داخل الحقول إلى اليمين */
+        }
+
+            .form-group input:focus,
+            .form-group textarea:focus {
+                border-color: #ffcc00;
+                outline: none;
+            }
+
+    .submit-btn {
+        background-color: #ffcc00;
+        color: #000;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: block;
+        margin: 0 auto; /* توسيط زر الإرسال */
+    }
+
+        .submit-btn:hover {
+            background-color: #e6b800;
+        }
+
+</style>
+
+<div class="contact-form">
+    <h2 style="text-align: center;">تواصل معنا</h2>
+
+    <!-- عرض جميع الأخطاء إن وجدت -->
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <form asp-action="Contact" method="post">
+        <div class="form-group">
+            <label >الاسم</label>
+            <input type="text" asp-for="Name" class="form-control" required>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>البريد الالكترونى</label>
+            <input type="email" asp-for="Email" class="form-control" required>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label >الرسالة</label>
+            <textarea asp-for="Content" class="form-control" rows="5" required></textarea>
+            <span asp-validation-for="Content" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="submit-btn">إرسال</button>
+    </form>
+</div>
+

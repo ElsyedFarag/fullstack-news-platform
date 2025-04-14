@@ -1,0 +1,175 @@
+﻿@model News_Models.Model.News
+
+@{
+    ViewData["Title"] = "إنشاء خبر جديد";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<main class="app-main" style="text-align:end;">
+    <div class="app-content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6"><h3 class="mb-0"></h3></div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-end">
+                        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                        <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">@ViewData["Title"]</h3>
+                        </div>
+
+                        <form asp-action="Create" enctype="multipart/form-data" method="post" accept-charset="UTF-8" id="createForm">
+                            <div class="card-body">
+                                <div class="row">
+                                    <!-- رفع الفيديو ومعاينته -->
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <video id="videoPreview" width="100%" controls style="border-radius: 10px;">
+                                                <source type="video/mp4">
+                                                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                                            </video>
+                                        </div>
+                                        <div class="form-group">
+                                            <input asp-for="VideoUpload" type="file" class="form-control" accept="video/*" id="videoUpload" />
+                                            <span asp-validation-for="VideoUpload" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                        <div class="form-group">
+                                            <label asp-for="Title" class="control-label">العنوان</label>
+                                            <input asp-for="Title" class="form-control" placeholder="أدخل عنوان الخبر" id="titleInput" />
+                                            <span asp-validation-for="Title" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Description" class="control-label">الوصف</label>
+                                            <textarea asp-for="Description" class="form-control description-box" rows="5" placeholder="أدخل وصف الخبر" id="descriptionInput"></textarea>
+                                            <span asp-validation-for="Description" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Author" class="control-label">المؤلف</label>
+                                            <input asp-for="Author" class="form-control" placeholder="أدخل اسم المؤلف" id="authorInput" />
+                                            <span asp-validation-for="Author" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Status" class="control-label">الحالة</label>
+                                            <select asp-for="Status" class="form-control" id="statusInput">
+                                                <option disabled selected>اختر الحالة</option>
+                                                <option value="1">منشور</option>
+                                                <option value="2">مؤرشف</option>
+                                            </select>
+                                            <span asp-validation-for="Status" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" style="margin-top: 15px;">
+                                    <input type="submit" value="إنشاء" class="btn btn-primary" id="submitButton" />
+                                    <a asp-action="Index" class="btn btn-secondary">العودة إلى القائمة</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div> <!-- /.card -->
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        document.getElementById('videoUpload').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            const maxSize = 100 * 1024 * 1024; // 100 MB in bytes
+
+            if (file && file.size > maxSize) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'خطأ',
+                    text: 'لا يمكن رفع فيديو بحجم أكبر من 100 ميجابايت.',
+                });
+                e.target.value = ''; // Clear the file input
+                document.getElementById('videoPreview').src = ''; // Clear the video preview
+            } else if (file) {
+                const videoPreview = document.getElementById('videoPreview');
+                videoPreview.src = URL.createObjectURL(file);
+                videoPreview.load();
+            }
+        });
+
+        document.getElementById('createForm').addEventListener('submit', async function (e) {
+            e.preventDefault(); // Prevent default form submission
+
+            const titleInput = document.getElementById('titleInput');
+            const descriptionInput = document.getElementById('descriptionInput');
+            const authorInput = document.getElementById('authorInput');
+            const statusInput = document.getElementById('statusInput');
+
+            if (!titleInput.value.trim() || !descriptionInput.value.trim() || !authorInput.value.trim() || statusInput.value === "") {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'خطأ',
+                    text: 'الرجاء تعبئة جميع الحقول المطلوبة.',
+                });
+                return;
+            }
+
+            Swal.fire({
+                title: 'جاري إنشاء الخبر',
+                text: '...الرجاء الانتظار',
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+
+            try {
+                const formData = new FormData(this);
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                if (response.ok) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'تم بنجاح',
+                        text: 'تم إنشاء الخبر بنجاح.',
+                    }).then(() => {
+                        window.location.href = '@Url.Action("Index")';
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'خطأ',
+                        text: 'حدث خطأ أثناء إنشاء الخبر.',
+                    });
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'خطأ',
+                    text: 'حدث خطأ أثناء إنشاء الخبر.',
+                });
+            } finally {
+                Swal.close();
+            }
+        });
+    </script>
+}

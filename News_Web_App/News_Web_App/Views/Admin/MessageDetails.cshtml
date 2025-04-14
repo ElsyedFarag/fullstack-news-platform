@@ -1,0 +1,157 @@
+﻿@model News_Models.Model.Message
+
+@{
+    ViewData["Title"] = "تفاصيل الرسالة";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<!-- تضمين Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<main class="app-main" style="text-align:end">
+    <!--begin::App Content Header-->
+    <div class="app-content-header">
+        <!--begin::Container-->
+        <div class="container-fluid">
+            <!--begin::Row-->
+            <div class="row">
+                <div class="col-sm-6"><h3 class="mb-0"></h3></div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-end">
+                        <li class="breadcrumb-item active" aria-current="page">@ViewData["Title"]</li>
+                        <li class="breadcrumb-item"><a asp-action="Message">الرسائل</a></li>
+                        <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::App Content Header-->
+    <!--begin::App Content-->
+    <div class="app-content">
+        <!--begin::Container-->
+        <div class="container-fluid">
+            <!--begin::Row-->
+            <div class="row">
+                <div class="col-12">
+                    <!-- بطاقة تفاصيل الرسالة -->
+                    <div class="card shadow-lg">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="card-title"><i class="fas fa-envelope"></i> تفاصيل الرسالة</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-lte-toggle="card-collapse" title="Collapse">
+                                    <i data-lte-icon="expand" class="bi bi-plus-lg"></i>
+                                    <i data-lte-icon="collapse" class="bi bi-dash-lg"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool" data-lte-toggle="card-remove" title="Remove">
+                                    <i class="bi bi-x-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                               
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <h5><i class="fas fa-comment"></i> المحتوى</h5>
+                                        <div class="message-content">
+                                            @if (Model.Content.Length > 150)
+                                            {
+                                                <p class="text-muted short-content">...@Model.Content.Substring(0, 150)</p>
+                                                <p class="text-muted full-content" style="display: none;">@Model.Content</p>
+                                                <a href="#" class="read-more">قراءة المزيد</a>
+                                            }
+                                            else
+                                            {
+                                                <p class="text-muted">@Model.Content</p>
+                                            }
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h5><i class="fas fa-reply"></i> الرد</h5>
+                                        <p class="text-muted">@Model.Reply</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h5><i class="fas fa-archive"></i> مؤرشف</h5>
+                                        <p class="text-muted">@Model.IsArchived</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h5><i class="fas fa-info-circle"></i> الحالة</h5>
+                                        <p class="text-muted">@Model.Status</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <h5><i class="fas fa-user"></i> الاسم</h5>
+                                        <p class="text-muted">@Model.Name</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h5><i class="fas fa-envelope"></i> البريد الإلكتروني</h5>
+                                        <p class="text-muted">
+                                            @Model.Email
+                                            <button class="btn btn-sm btn-outline-secondary ms-2" onclick="copyToClipboard('@Model.Email')">
+                                                <i class="fas fa-copy"></i> نسخ
+                                            </button>
+                                        </p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h5><i class="fas fa-calendar-alt"></i> تاريخ الإنشاء</h5>
+                                        <p class="text-muted">@Model.Created</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h5><i class="fas fa-calendar-check"></i> تاريخ التحديث</h5>
+                                        <p class="text-muted">@Model.Updated</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <a asp-action="MessageEdit" asp-route-id="@Model.Id" class="btn btn-primary"><i class="fas fa-edit"></i> تعديل</a>
+                            <a asp-action="Message" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> العودة إلى القائمة</a>
+                        </div>
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::App Content-->
+</main>
+
+<script>
+    // وظيفة نسخ البريد الإلكتروني
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(function() {
+            alert('تم نسخ البريد الإلكتروني: ' + text);
+        }, function(err) {
+            alert('فشل نسخ البريد الإلكتروني: ' + err);
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+         document.querySelectorAll(".read-more").forEach(function (btn) {
+             btn.addEventListener("click", function (event) {
+                 event.preventDefault(); // منع الانتقال إلى رابط #
+
+                 let messageContent = this.closest(".message-content");
+                 let shortContent = messageContent.querySelector(".short-content");
+                 let fullContent = messageContent.querySelector(".full-content");
+
+                 if (shortContent.style.display !== "none") {
+                     shortContent.style.display = "none";
+                     fullContent.style.display = "block";
+                     this.textContent = "إخفاء النص";
+                 } else {
+                     shortContent.style.display = "block";
+                     fullContent.style.display = "none";
+                     this.textContent = "قراءة المزيد";
+                 }
+             });
+         });
+     });
+</script>

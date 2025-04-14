@@ -1,0 +1,77 @@
+﻿@{
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout) && parentLayout !=  null)
+    {
+        Layout = parentLayout.ToString();
+    }
+    else
+    {
+        Layout = "_Admin.cshtml";
+    }
+}
+
+
+
+<style>
+    input{
+        text-align:left;
+    }
+</style>
+
+<main class="app-main" style="text-align:end;">
+    <div class="app-content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6"><h3 class="mb-0"></h3></div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-end">
+                        <li class="breadcrumb-item active" aria-current="page">اعدادات الحساب</li>
+                        <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">اعدادات الحساب</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-lte-toggle="card-collapse" title="Collapse">
+                                    <i data-lte-icon="expand" class="bi bi-plus-lg"></i>
+                                    <i data-lte-icon="collapse" class="bi bi-dash-lg"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool" data-lte-toggle="card-remove" title="Remove">
+                                    <i class="bi bi-x-lg"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool" id="exportExcel" title="Export to Excel">
+                                    <i class="fas fa-file-excel"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+
+                          
+
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <partial name="_ManageNav" />
+                                    </div>
+                                    <div class="col-md-9">
+                                        @RenderBody()
+                                    </div>
+                                </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

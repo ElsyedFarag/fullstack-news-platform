@@ -1,0 +1,133 @@
+﻿@{
+    if (TempData["SuccessRegister"] != null)
+    {
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "تم إنشاء الحساب بنجاح",
+                    showConfirmButton: false,
+                    timer: 1900
+                });
+            });
+        </script>
+    }
+
+
+
+    if (TempData["ResetPasswordDone"] != null)
+    {
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "تم إعادة تعيين كلمة المرور بنجاح.",
+                    showConfirmButton: false,
+                    timer: 2500
+                });
+            });
+        </script>
+    }
+    if (TempData["ResetPassword"] != null)
+    {
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "يرجى التحقق من بريدك الإلكتروني لإعادة تعيين كلمة المرور.",
+                    showConfirmButton: false,
+                    timer: 2500
+                });
+            });
+        </script>
+    }
+
+    if (TempData["SuccessMessage"] != null)
+    {
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+
+        <script type="text/javascript">
+            toastr.options = {
+                "positionClass": "toast-top-center", // توسيط الإشعار في الأعلى
+                "timeOut": "3000", // مدة ظهور الإشعار
+                "closeButton": true, // زر الإغلاق
+                "progressBar": true, // شريط التقدم
+                "toastClass": "custom-toast" // تطبيق التصميم المخصص
+            };
+            toastr.success("@Html.Raw(TempData["SuccessMessage"])");
+        </script>
+
+        <style>
+            /* تخصيص لون الإشعار */
+            .custom-toast {
+                background-color: gold !important; /* اللون الذهبي */
+                color: black !important; /* لون النص */
+                font-weight: bold;
+            }
+
+                .custom-toast .toast-title {
+                    color: black !important;
+                }
+
+                .custom-toast .toast-message {
+                    color: black !important;
+                }
+
+                .custom-toast .toast-progress {
+                    background-color: black !important; /* شريط التقدم أسود */
+                }
+        </style>
+    }
+
+    if (TempData["AccessDeniedMessage"] != null)
+    {
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+
+        <style>
+            .custom-toast {
+                font-size: 16px;
+                border-radius: 8px;
+                padding: 15px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                width: 450px; /* تحديد العرض */
+                max-width: 90%; /* عدم تجاوز عرض الشاشة */
+                text-align: center; /* توسيط النص */
+            }
+
+            .toast-top-center {
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        </style>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                toastr.options = {
+                    "positionClass": "toast-top-center", // توسيط أفقي
+                    "timeOut": "5000", // مدة الظهور
+                    "extendedTimeOut": "2000",
+                    "closeButton": true,
+                    "progressBar": true,
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut",
+                    "toastClass": "custom-toast"
+                };
+                toastr.error("@Html.Raw(TempData["AccessDeniedMessage"])");
+            });
+        </script>
+    }
+}

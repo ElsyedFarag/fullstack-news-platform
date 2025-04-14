@@ -1,0 +1,229 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@model IPagedList<News_Models.Model.News>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .news-card {
+        background-color: #1a1a2e;
+        color: white;
+        padding: 15px;
+        border-radius: 16px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        max-width: 360px;
+        height:355px;
+        margin: auto;
+        transition: transform 0.3s ease;
+    }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card video,
+        .news-card .no-video-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            position: relative;
+        }
+
+    .no-video-image {
+        background-color: #2e2e3e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .news-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 8px;
+        text-align: center;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .news-meta {
+        font-size: 0.9rem;
+        color: #bbb;
+        text-align: center;
+    }
+
+    .video-duration,
+    .video-view {
+        position: absolute;
+        bottom: 125px;
+        padding: 4px 10px;
+        background: rgba(0, 0, 0, 0.65);
+        color: white;
+        font-size: 0.85rem;
+        border-radius: 5px;
+        z-index: 10;
+    }
+
+    .video-duration {
+        right: 20px;
+    }
+
+    .video-view {
+        left: 20px;
+    }
+
+    .linkAddress {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .page-item .page-link {
+        border-radius: 50%;
+        padding: 0.5em 0.75em;
+        margin: 0 0.2em;
+        color: white;
+        border: 1px solid #ddd;
+        transition: background-color 0.3s;
+    }
+
+        .page-item .page-link:hover {
+            background-color: #0056b3;
+            color: #fff;
+            border-color: #0056b3;
+        }
+
+</style>
+
+<div class="container px-4 px-lg-5 mt-5">
+    <div class="row gx-4 gy-5 row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 justify-content-center">
+        @foreach (var item in Model)
+        {
+            <div class="col">
+                <div class="news-card">
+                    <a href="/Home/Details/@item.Id" class="linkAddress">
+                        @if (!string.IsNullOrEmpty(item.VideoFile))
+                        {
+                            <video muted class="news-video">
+                                <source src="@Url.Content(item.VideoFile)" type="video/mp4">
+                                المتصفح لا يدعم تشغيل الفيديو.
+                            </video>
+                            <span class="video-duration"></span>
+                            <span class="video-view">
+                                <i class="fas fa-eye"></i> @item.ViewCount
+                            </span>
+                        }
+                        else
+                        {
+                            <div class="no-video-image">
+                                <img src="~/img/icons8-video-80.png" alt="لا يوجد فيديو" />
+                            </div>
+                            <span class="video-duration">00:00</span>
+                            <span class="video-view">
+                                <i class="fas fa-eye"></i> @item.ViewCount
+                            </span>
+                        }
+                    </a>
+                    <div class="news-details">
+                        <a href="/Home/Details/@item.Id">
+                            <div class="news-title" style="text-align:end">@item.Title</div>
+                        </a>
+                        <div class="news-meta">الناشر: @item.Author - @item.Created.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("ar-EG"))</div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Pagination -->
+    <div class="d-flex justify-content-center mt-4">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { Page = page }),
+                 new PagedListRenderOptions
+        {
+            LiElementClasses = new string[] { "page-item" },
+            PageClasses = new string[] { "page-link" }
+        })
+    </div>
+</div>
+
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const videos = document.querySelectorAll(".news-video");
+
+    videos.forEach(video => {
+        const newsCard = video.closest(".news-card");
+        const durationElement = newsCard.querySelector(".video-duration");
+
+        if (!video || !video.querySelector("source")) {
+            if (durationElement) {
+                durationElement.style.display = "none";
+            }
+            return;
+        }
+
+        // تشغيل الفيديو عند تمرير الماوس
+        newsCard.addEventListener("mouseover", () => video.play());
+        newsCard.addEventListener("mouseout", () => video.pause());
+
+        let touchStartTime = 0;
+        let touchEndTime = 0;
+        let isScrolling = false;
+        let longPressTimer;
+
+        video.addEventListener("touchstart", (event) => {
+            touchStartTime = new Date().getTime();
+            isScrolling = false; // إعادة ضبط التمرير
+            longPressTimer = setTimeout(() => {
+                if (!isScrolling) {
+                    video.play(); // تشغيل الفيديو إذا تم الضغط لفترة طويلة
+                }
+            }, 500);
+        });
+
+        video.addEventListener("touchmove", (event) => {
+            isScrolling = true; // المستخدم يحاول التمرير
+            clearTimeout(longPressTimer); // إلغاء المؤقت
+        });
+
+        video.addEventListener("touchend", (event) => {
+            touchEndTime = new Date().getTime();
+            const pressDuration = touchEndTime - touchStartTime;
+
+            if (!isScrolling && pressDuration < 500) {
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            }
+
+            clearTimeout(longPressTimer);
+        });
+
+        // التأكد من عدم التأثير على النقر على العنوان
+        const titleLink = newsCard.querySelector(".news-title a");
+        if (titleLink) {
+            titleLink.addEventListener("touchstart", (event) => {
+                event.stopPropagation(); // السماح بالنقر على الرابط
+            });
+        }
+
+        // حساب مدة الفيديو وعرضها بعد تحميله
+        video.addEventListener("loadeddata", () => {
+            const minutes = Math.floor(video.duration / 60);
+            const seconds = Math.floor(video.duration % 60);
+            if (durationElement) {
+                durationElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                durationElement.style.display = "block";
+            }
+        });
+    });
+});
+</script>

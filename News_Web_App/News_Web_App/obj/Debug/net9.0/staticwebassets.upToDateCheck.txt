@@ -1,0 +1,151 @@
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\jquery\dist\jquery.slim.min.js
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\admin\js\adminlte.js
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\jquery\dist\jquery.min.js
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\jquery\dist\jquery.js
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\favicon.ico
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\jquery-validation\dist\additional-methods.js
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\css\about.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\jquery\dist\jquery.min.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\js\site.js
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\jquery\dist\jquery.slim.min.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\admin\css\adminlte.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\css\footer.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\css\more.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\jquery\dist\jquery.slim.js
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\css\Tooltip.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\jquery\LICENSE.txt
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\css\bootstrap.rtl.min.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\jquery-validation\LICENSE.md
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\css\site.css
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\wwwroot\css\all.css
+wwwroot\admin\css\adminlte.css
+wwwroot\admin\js\adminlte.js
+wwwroot\css\about.css
+wwwroot\css\all.css
+wwwroot\css\bootstrap.rtl.min.css
+wwwroot\css\footer.css
+wwwroot\css\more.css
+wwwroot\css\site.css
+wwwroot\css\Tooltip.css
+wwwroot\favicon.ico
+wwwroot\img\AdminLTELogo.png
+wwwroot\img\cropped-11zon_cropped.png
+wwwroot\img\icons8-user-64.png
+wwwroot\img\icons8-video-80.png
+wwwroot\img\user2-160x160.jpg
+wwwroot\img\user-photo.png
+wwwroot\js\site.js
+wwwroot\lib\bootstrap\dist\css\bootstrap.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+wwwroot\lib\bootstrap\LICENSE
+wwwroot\lib\jquery\dist\jquery.js
+wwwroot\lib\jquery\dist\jquery.min.js
+wwwroot\lib\jquery\dist\jquery.min.map
+wwwroot\lib\jquery\dist\jquery.slim.js
+wwwroot\lib\jquery\dist\jquery.slim.min.js
+wwwroot\lib\jquery\dist\jquery.slim.min.map
+wwwroot\lib\jquery\LICENSE.txt
+wwwroot\lib\jquery-validation\dist\additional-methods.js
+wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+wwwroot\lib\jquery-validation\LICENSE.md
+wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\uploads\videos\06ebedaf-cb0f-4952-8b21-9de668f3e888.mp4
+wwwroot\uploads\videos\1f8f53a7-6559-4fc4-8089-3b6a6664e603.mp4
+wwwroot\uploads\videos\74b66d18-a248-48a3-919b-12499d3a7fd9.mp4
+wwwroot\uploads\videos\8189172b-51cc-40cf-aed1-4d43eb214d23.mp4

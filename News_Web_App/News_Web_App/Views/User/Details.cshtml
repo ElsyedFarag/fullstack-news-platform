@@ -1,0 +1,101 @@
+﻿@using News_Models.UserVM
+@model UserVM
+@{
+    Layout = "_Admin";
+}
+
+<main class="app-main" style="text-align:end;">
+    <div class="app-content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6"><h3 class="mb-0"></h3></div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-end">
+                        <li class="breadcrumb-item active" aria-current="page">المستخدمين</li>
+                        <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">تفاصيل المستخدم</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-lte-toggle="card-collapse" title="Collapse">
+                                    <i data-lte-icon="expand" class="bi bi-plus-lg"></i>
+                                    <i data-lte-icon="collapse" class="bi bi-dash-lg"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool" data-lte-toggle="card-remove" title="Remove">
+                                    <i class="bi bi-x-lg"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool" id="exportExcel" title="Export to Excel">
+                                    <i class="fas fa-file-excel"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="container-fluid mt-4">
+
+                                <dl class="row">
+                                    <dt class="col-sm-3 font-weight-bold">المعرف</dt>
+                                    <dd class="col-sm-9">@Html.DisplayFor(model => model.Id)</dd>
+                                    <hr class="my-2"> <!-- فاصل بين الصفوف -->
+
+                                    <dt class="col-sm-3 font-weight-bold">الاسم</dt>
+                                    <dd class="col-sm-9">@Html.DisplayFor(model => model.Name)</dd>
+                                    <hr class="my-2"> <!-- فاصل بين الصفوف -->
+
+                                    <dt class="col-sm-3 font-weight-bold">البريد الالكترونى</dt>
+                                    <dd class="col-sm-9">@Html.DisplayFor(model => model.Email)</dd>
+                                    <hr class="my-2"> <!-- فاصل بين الصفوف -->
+
+                                    <dt class="col-sm-3 font-weight-bold">العنوان</dt>
+                                    <dd class="col-sm-9">@Html.DisplayFor(model => model.Address)</dd>
+                                    <hr class="my-2"> <!-- فاصل بين الصفوف -->
+
+                                    <dt class="col-sm-3 font-weight-bold">رقم المحمول</dt>
+                                    <dd class="col-sm-9">@Html.DisplayFor(model => model.PhoneNumber)</dd>
+                                    <hr class="my-2"> <!-- فاصل بين الصفوف -->
+
+                                    <dt class="col-sm-3 font-weight-bold">النوع</dt>
+                                    <dd class="col-sm-9">@Html.DisplayFor(model => model.Gender)</dd>
+                                    <hr class="my-2"> <!-- فاصل بين الصفوف -->
+
+                                    <dt class="col-sm-3 font-weight-bold">اسم المستخدم</dt>
+                                    <dd class="col-sm-9">@Html.DisplayFor(model => model.UserName)</dd>
+                                    <hr class="my-2"> <!-- فاصل بين الصفوف -->
+
+                                    <dt class="col-sm-3 font-weight-bold">الأدوار</dt>
+                                    <dd class="col-sm-9">@string.Join(", ", Model.Roles)</dd>
+                                    <hr class="my-2"> <!-- فاصل بين الصفوف -->
+
+                                    <dt class="col-sm-3 font-weight-bold">صورة الملف الشخصي</dt>
+                                    <dd class="col-sm-9 text-center">
+                                        @if (Model.Image != null)
+                                        {
+                                            <img id="profilePicture" class="img-fluid rounded-circle shadow-sm border border-primary" style="width: 200px; height: 200px;" alt="profile" src="data:image/*;base64,@(Convert.ToBase64String(Model.Image))" />
+                                        }
+                                        else
+                                        {
+                                            <img id="profilePicture" class="img-fluid rounded-circle shadow-sm border border-primary" style="width: 200px; height: 200px;" alt="profile" src="~/img/user-photo.png" />
+                                        }
+                                    </dd>
+                                </dl>
+
+                                <div class="text-center mt-4">
+                                    @Html.ActionLink("تعديل", "Edit", new { id = Model.Id }, new { @class = "btn btn-warning mx-2" })
+                                    <a class="btn btn-secondary mx-2" asp-action="Index">العودة إلى القائمة</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

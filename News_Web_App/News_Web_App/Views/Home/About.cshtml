@@ -1,0 +1,154 @@
+﻿@using News_Models.UserVM
+@model IEnumerable<AboutUserVM>
+<link href="~/css/about.css" rel="stylesheet" />
+
+<div class="about-container">
+
+    <!-- قسم الفريق -->
+    <div class="about-section-logo">
+        <div class="team-section" style="text-align: center;">
+            <img src="@(ViewData["logo"] != null ? $"data:image/png;base64,{ViewData["logo"]}" : Url.Content("~/img/cropped-11zon_cropped.png"))"
+            alt="شعار الموقع" style="width: 150px;height: 150px;">
+        </div>
+    </div>
+    <!-- قسم من نحن -->
+    <div class="about-section">
+        <h2 style="text-align: center;">من نحن؟</h2>
+        <p>
+            @(ViewData["aboutUs"] as string ?? "نحن فريق متخصص في تقديم الأخبار والتحليلات السياسية والاقتصادية والاجتماعية. نهدف إلى تقديم محتوى عالي الجودة وموثوق به لجمهورنا الكريم. نعمل بجد لتوفير المعلومات الدقيقة والتحليلات العميقة التي تساعد في فهم الأحداث الجارية.")
+        </p>
+    </div>
+    <div class="about-section">
+        <h2 style="text-align: center;">فريق العمل</h2>
+        <div class="team-carousel-wrapper">
+            <button class="carousel-arrow left" onclick="scrollTeam(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="team-carousel" id="teamCarousel">
+
+                @if (Model != null && Model.Any())
+                {
+                    foreach (var item in Model)
+                    {
+                        ;
+                        <div class="member-card">
+                            @if (item.ImageUrl != null)
+                            {
+                                <img src="data:image/*;base64,@(Convert.ToBase64String(item.ImageUrl))" alt="صورة العضو" class="member-image">
+                            }
+                            else
+                            {
+                                <img src="~/img/user-photo.png" alt="صورة العضو" class="member-image">
+                            }
+
+                            <h3>@item.Name</h3>
+                            @if (!string.IsNullOrEmpty(item.RoleUSer))
+                            {
+                                <p class="role">@item.RoleUSer</p>
+                            }
+                            else
+                            {
+                                <p class="role">غير محدد</p>
+                            }
+                            @if (!string.IsNullOrEmpty(item.About))
+                            {
+                                <p class="bio">@item.About</p>
+                            }
+                            else
+                            {
+                                <p class="bio">لا توجد معلومات إضافية عن العضو.</p>
+                            }
+
+                            <div class="social-links">
+                                @if (!string.IsNullOrEmpty(item.Facebook))
+                                {
+                                    <a href="@item.Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                }
+                                @if (!string.IsNullOrEmpty(item.Twitter))
+                                {
+                                    <a href="@item.Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                                }
+                                @if (!string.IsNullOrEmpty(item.Linkedin))
+                                {
+                                    <a href="@item.Linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                }
+                                @if (!string.IsNullOrEmpty(item.GitHub))
+                                {
+                                    <a href="@item.GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                                }
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p>لا توجد أعضاء لعرضهم حالياً.</p>
+                }
+                
+            </div>
+
+            <button class="carousel-arrow right" onclick="scrollTeam(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+
+            <div class="about-section">
+                <h2 style="text-align: center;">إحصائياتنا</h2>
+                <div class="stats-section">
+                    <div class="stat-box">
+                        <h3>10+</h3>
+                        <p>سنوات من الخبرة</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>500+</h3>
+                        <p>مقالة منشورة</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>1M+</h3>
+                        <p>قارئ شهريًا</p>
+                    </div>
+                </div>
+            </div>
+    <!-- زر التواصل -->
+    <button class="contact-btn" onclick="window.location.href='/Home/Contact'">تواصل معنا</button>
+</div>
+
+<script>
+    let currentIndex = 0;
+    const slider = document.getElementById("teamSlider");
+    const cardWidth = 280; // عرض الكارت مع المسافة بين الكروت
+
+    function slideLeft() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSliderPosition();
+        }
+    }
+
+    function slideRight() {
+        const visibleCards = Math.floor(slider.parentElement.offsetWidth / cardWidth);
+        const totalCards = slider.children.length;
+        if (currentIndex < totalCards - visibleCards) {
+            currentIndex++;
+            updateSliderPosition();
+        }
+    }
+
+    function updateSliderPosition() {
+        slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+
+    window.addEventListener('resize', updateSliderPosition);
+
+     function scrollTeam(direction) {
+        const container = document.getElementById('teamCarousel');
+        const scrollAmount = 300; // مقدار التحريك بالبكسل
+        container.scrollBy({
+            left: direction * scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+</script>

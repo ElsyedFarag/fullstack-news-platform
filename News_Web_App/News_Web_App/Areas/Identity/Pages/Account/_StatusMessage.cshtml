@@ -1,0 +1,17 @@
+﻿@model string
+
+<style>
+    .alert {
+        text-align: right; /* محاذاة النص لليمين */
+        direction: rtl; /* جعل اتجاه النص من اليمين إلى اليسار */
+    }
+</style>
+
+@if (!String.IsNullOrEmpty(Model))
+{
+    var statusMessageClass = Model.StartsWith("Error") ? "danger" : "success";
+    <div class="alert alert-@statusMessageClass alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="إغلاق"></button>
+        @Model
+    </div>
+}

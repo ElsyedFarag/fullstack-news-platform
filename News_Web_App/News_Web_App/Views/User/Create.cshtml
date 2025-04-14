@@ -1,0 +1,175 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using News_Models.UserVM
+@model AddUserVM
+@inject RoleManager<IdentityRole> _roleManager;
+@{
+    Layout = "_Admin";
+}
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+
+
+
+<main class="app-main" style="text-align:end;">
+    <div class="app-content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6"><h3 class="mb-0"></h3></div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-end">
+                        <li class="breadcrumb-item active" aria-current="page">اضافة مستخدم</li>
+                        <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">انشاء مستخدم جديد</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-lte-toggle="card-collapse" title="Collapse">
+                                    <i data-lte-icon="expand" class="bi bi-plus-lg"></i>
+                                    <i data-lte-icon="collapse" class="bi bi-dash-lg"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool" data-lte-toggle="card-remove" title="Remove">
+                                    <i class="bi bi-x-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body" style="padding: 40px; text-align: right; direction: rtl;">
+                            <form id="registerForm" method="post" asp-action="Create">
+                                <div asp-validation-summary="ModelOnly" class="alert alert-danger text-center mb-4" role="alert"></div>
+
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label asp-for="Name" class="form-label">الاسم</label>
+                                        <input asp-for="Name" class="form-control" required maxlength="20" style="text-align:right"/>
+                                        <span asp-validation-for="Name" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label asp-for="BirthDate" class="form-label">تاريخ الميلاد</label>
+                                        <input asp-for="BirthDate" type="date" class="form-control" required style="text-align:right">
+                                        <span asp-validation-for="BirthDate" class="text-danger"></span>
+                                    </div>
+                                    <div class="col">
+                                        <label asp-for="Gender" class="form-label">الجنس</label>
+                                        <div class="d-flex align-items-center">
+                                            <div class="form-check me-3">
+                                                <label class="form-check-label">ذكر</label>
+                                                <input asp-for="Gender" type="radio" value="Male" class="form-check-input" required style="text-align:right" checked>
+                                            </div>
+                                            <div class="form-check" style="margin-right: 10px;">
+                                                <label class="form-check-label">أنثى</label>
+                                                <input asp-for="Gender" type="radio" value="Female" class="form-check-input" required style="text-align:right">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label asp-for="Email" class="form-label">البريد الإلكتروني</label>
+                                        <input asp-for="Email" type="email" class="form-control" required style="text-align:right">
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                    <div class="col">
+                                        <label asp-for="PhoneNumber" class="form-label">رقم الهاتف</label>
+                                        <input asp-for="PhoneNumber" maxlength="11" class="form-control" required style="text-align:right">
+                                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <label asp-for="Password" class="form-label">كلمة المرور</label>
+                                        <input asp-for="Password" type="password" class="form-control" maxlength="10" required style="text-align:right">
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+                                    <div class="col">
+                                        <label asp-for="ConfirmPassword" class="form-label">تأكيد كلمة المرور</label>
+                                        <input asp-for="ConfirmPassword" type="password" class="form-control" maxlength="10" required style="text-align:right">
+                                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label">الأدوار</label>
+                                    <div class="bg-light p-3 rounded">
+                                        @foreach (var identityRole in _roleManager.Roles)
+                                        {
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="Roles" value="@identityRole.Name" id="role_@identityRole.Name"  />
+                                                <label class="form-check-label" for="role_@identityRole.Name">@identityRole.Name</label>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+
+                           
+                                    <div class="text-center mt-4">
+                                    <button id="registerSubmit" type="submit" class="btn btn-primary btn-lg" style="margin-bottom: 5px;">
+                                        إضافة المستخدم
+                                    </button>
+                                    <a id="registerSubmit" asp-action="Index" class="btn btn-secondary btn-lg" style="margin-bottom: 5px;">
+                                        العودة إلى القائمة
+                                    </a>
+                                    </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- تحسين CSS للتصميم -->
+<style>
+    .form-control {
+        border-radius: 8px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        transition: all 0.3s;
+    }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+        }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        transition: background-color 0.3s;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+    .form-check-label {
+        font-size: 14px;
+    }
+
+    .card-4 {
+        background-color: #fff;
+        padding: 20px;
+    }
+</style>
+
+<script src="~/vendor/jquery/jquery.min.js"></script>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

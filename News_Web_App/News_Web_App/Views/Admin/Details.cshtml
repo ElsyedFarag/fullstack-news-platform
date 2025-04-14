@@ -1,0 +1,123 @@
+﻿@using News_Models.Model
+@model News_Models.Model.News
+
+@{
+    ViewData["Title"] = "تفاصيل الخبر";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<link href="~/css/more.css" rel="stylesheet" />
+
+<main class="app-main" style="text-align:end;">
+    <div class="app-content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6"></div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-end">
+                        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                        <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card card-hover">
+                        <div class="card-header">
+                            <h3 class="card-title">@ViewData["Title"]</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-lte-toggle="card-collapse">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool" data-lte-toggle="card-remove">
+                                    <i class="bi bi-x-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 text-center">
+                                    <video width="100%" controls class="video-frame">
+                                        <source src="@Url.Content(Model.VideoFile)" type="video/mp4">
+                                        <p>المتصفح لا يدعم تشغيل الفيديو.</p>
+                                    </video>
+                                </div>
+                                <div class="col-md-6">
+                                    <dl class="row">
+                                        <dt class="col-sm-4">عنوان الخبر</dt>
+                                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Title)</dd>
+
+                                        <dt class="col-sm-4">موضوع الخبر</dt>
+                                        <dd class="col-sm-8">
+                                            <span class="news-description" data-full-text="@Model.Description">
+                                                @(Model.Description.Length > 200 ? Model.Description.Substring(0, 200) + "..." : Model.Description)
+                                            </span>
+                                            <a href="javascript:void(0);" class="expand-btn">عرض المزيد</a>
+                                        </dd>
+
+                                        <dt class="col-sm-4">الناشر</dt>
+                                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Author)</dd>
+
+                                        <dt class="col-sm-4">تاريخ النشر</dt>
+                                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Created)</dd>
+
+                                        <dt class="col-sm-4">تاريخ التعديل</dt>
+                                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Updated)</dd>
+
+                                        <dt class="col-sm-4">حالة الخبر</dt>
+                                        <dd class="col-sm-8">
+                                            <span class="badge @(Model.Status == NewsStatus.Published ? "bg-success" : "bg-warning")">
+                                                @(Model.Status == NewsStatus.Published ? "منشور" : "مؤرشف")
+                                            </span>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">
+                                    <i class="bi bi-pencil-square"></i> تعديل
+                                </a>
+                                <a asp-action="Index" class="btn btn-secondary">
+                                    <i class="bi bi-arrow-left"></i> العودة إلى القائمة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $(".expand-btn").on("click", function () {
+                var descriptionElement = $(".news-description");
+                var fullText = descriptionElement.attr("data-full-text");
+
+                if (descriptionElement.hasClass("expanded")) {
+                    descriptionElement.text(fullText.substring(0, 200) + "...");
+                    $(this).text("عرض المزيد");
+                    descriptionElement.removeClass("expanded");
+                } else {
+                    descriptionElement.text(fullText);
+                    $(this).text("إخفاء");
+                    descriptionElement.addClass("expanded");
+                }
+            });
+        });
+    </script>
+}
+
+<style>
+    .video-frame {
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+</style>

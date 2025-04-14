@@ -1,0 +1,245 @@
+﻿@model News_Models.Model.Settings
+
+@{
+    ViewData["Title"] = "الإعدادات";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+<style>
+    /* تخصيص النصوص والعناصر */
+    .card {
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+        background: linear-gradient(45deg, #007bff, #00a8ff);
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .card-body {
+        background-color: #f8f9fa;
+    }
+
+    dt {
+        font-weight: bold;
+        color: #007bff;
+    }
+
+    dd {
+        color: #555;
+        text-align: center;
+        padding: 10px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .social-links .btn {
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+
+        .social-links .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+    .img-logo {
+        max-width: 150px;
+        max-height: 100px;
+        border: 2px solid #007bff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+        .img-logo:hover {
+            transform: scale(1.05);
+        }
+
+    .btn-edit {
+        background: linear-gradient(45deg, #007bff, #00a8ff);
+        color: white;
+        border: none;
+        transition: all 0.3s ease;
+    }
+
+        .btn-edit:hover {
+            background: linear-gradient(45deg, #00a8ff, #007bff);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+</style>
+
+<main class="app-main" style="text-align:end;">
+    <!-- Header -->
+    <div class="app-content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3 class="mb-0 text-primary" style="text-align:left"><i class="bi bi-gear"></i></h3>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-end">
+                        <li class="breadcrumb-item active" aria-current="page">@ViewData["Title"]</li>
+                        <li class="breadcrumb-item"><a href="#"><i class="bi bi-house-door"></i> الرئيسية</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="app-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow-sm">
+                        <div class="card-header">
+                            <h3 class="card-title"><i class="bi bi-info-circle"></i> إعدادات الموقع</h3>
+                        </div>
+                        <div class="card-body">
+                            @if (Model != null)
+                            {
+                                <div class="row">
+                                    <dl class="row">
+                                        <!-- الشعار -->
+                                        <dd class="col-sm-10">
+                                            @if (Model.Logo != null && Model.Logo.Length > 0)
+                                            {
+                                                <img src="data:image/png;base64,@Convert.ToBase64String(Model.Logo)"
+                                                     alt="شعار الموقع" class="img-logo">
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted">لا يوجد شعار متاح</span>
+                                            }
+                                        </dd>
+                                        <dt class="col-sm-2">الشعار</dt>
+
+                                        <!-- العنوان -->
+                                        <dd class="col-sm-10 fw-bold">
+                                            @if (!string.IsNullOrEmpty(Model.Title))
+                                            {
+                                                @Model.Title
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted">لا يوجد</span>
+                                            }
+                                        </dd>
+                                        <dt class="col-sm-2">عنوان الموقع</dt>
+
+                                        <!-- من نحن -->
+                                        <dd class="col-sm-10 text-muted">
+                                            @if (!string.IsNullOrEmpty(Model.AboutUs))
+                                            {
+                                                @Model.AboutUs
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted">لا يوجد</span>
+                                            }
+                                        </dd>
+                                        <dt class="col-sm-2">من نحن؟</dt>
+                                        <!-- روابط التواصل الاجتماعي -->
+                                        <dd class="col-sm-10 social-links">
+                                            @if (!string.IsNullOrEmpty(Model.Facebook))
+                                            {
+                                                <a href="@Model.Facebook" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                                    <i class="bi bi-facebook"></i> فيسبوك
+                                                </a>
+                                            }
+                                            @if (!string.IsNullOrEmpty(Model.Instagram))
+                                            {
+                                                <a href="@Model.Instagram" target="_blank" rel="noopener noreferrer" class="btn btn-danger">
+                                                    <i class="bi bi-instagram"></i> إنستجرام
+                                                </a>
+                                            }
+                                            @if (!string.IsNullOrEmpty(Model.Twitter))
+                                            {
+                                                <a href="@Model.Twitter" target="_blank" rel="noopener noreferrer" class="btn btn-info">
+                                                    <i class="bi bi-twitter"></i> تويتر
+                                                </a>
+                                            }
+                                            @if (!string.IsNullOrEmpty(Model.TikTok))
+                                            {
+                                                <a href="@Model.TikTok" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+                                                    <i class="fab fa-tiktok"></i> تيك توك
+                                                </a>
+                                            }
+                                            @if (string.IsNullOrEmpty(Model.Facebook) && string.IsNullOrEmpty(Model.Instagram) &&
+                                           string.IsNullOrEmpty(Model.Twitter) && string.IsNullOrEmpty(Model.TikTok))
+                                            {
+                                                <span class="text-muted">لا يوجد روابط تواصل اجتماعي</span>
+                                            }
+                                        </dd>
+
+                                        <dt class="col-sm-2">تابعنا</dt>
+
+                                        <!-- البريد الإلكتروني -->
+                                        <dd class="col-sm-10 text-muted">
+                                            @if (!string.IsNullOrEmpty(Model.Username))
+                                            {
+                                                @Model.Username
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted">لا يوجد</span>
+                                            }
+                                        </dd>
+                                        <dt class="col-sm-2">بريد الموقع</dt>
+
+                                        <!-- كلمة المرور -->
+                                        <dd class="col-sm-10 text-muted">@Model.Password</dd>
+                                        <dt class="col-sm-2">كلمة المرور</dt>
+
+                                        <!-- اسم المرسل -->
+                                        <dd class="col-sm-10 text-muted">
+                                            @if (!string.IsNullOrEmpty(Model.FromName))
+                                            {
+                                                @Model.FromName
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted">لا يوجد</span>
+                                            }
+                                        </dd>
+                                        <dt class="col-sm-2">اسم المرسل</dt>
+
+                                        <!-- بريد المرسل -->
+                                        <dd class="col-sm-10 text-muted">
+                                            @if (!string.IsNullOrEmpty(Model.FromEmail))
+                                            {
+                                                @Model.FromEmail
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted">لا يوجد</span>
+                                            }
+                                        </dd>
+                                        <dt class="col-sm-2">بريد المرسل</dt>
+                                    </dl>
+                                </div>
+
+                                <!-- زر التعديل -->
+                                <div class="mt-4 text-center">
+                                    <a asp-action="EditASetting" asp-route-id="@Model.Id" class="btn btn-edit">
+                                        <i class="bi bi-pencil-square"></i> تعديل الإعدادات
+                                    </a>
+                                </div>
+                            }
+                            else
+                            {
+                                <p class="text-danger text-center">لا توجد إعدادات متاحة.</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

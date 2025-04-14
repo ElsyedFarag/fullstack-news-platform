@@ -1,0 +1,12 @@
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Models\bin\Release\net9.0\News_Models.deps.json
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Models\bin\Release\net9.0\News_Models.dll
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Models\bin\Release\net9.0\News_Models.pdb
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Models\obj\Release\net9.0\News_Models.csproj.AssemblyReference.cache
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Models\obj\Release\net9.0\News_Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Models\obj\Release\net9.0\News_Models.AssemblyInfoInputs.cache
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Models\obj\Release\net9.0\News_Models.AssemblyInfo.cs
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Models\obj\Release\net9.0\News_Models.csproj.CoreCompileInputs.cache
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Models\obj\Release\net9.0\News_Models.dll
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Models\obj\Release\net9.0\refint\News_Models.dll
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Models\obj\Release\net9.0\News_Models.pdb
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Models\obj\Release\net9.0\ref\News_Models.dll

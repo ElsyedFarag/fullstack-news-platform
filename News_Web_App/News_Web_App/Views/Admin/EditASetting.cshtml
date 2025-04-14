@@ -1,0 +1,168 @@
+﻿@model News_Models.Model.Settings
+
+@{
+    ViewData["Title"] = "تعديل الإعدادات";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<main class="app-main" style="text-align:end;">
+    <!-- Header -->
+    <div class="app-content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3 class="mb-0 text-primary" style="text-align:left"><i class="bi bi-gear"></i> </h3>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-end">
+                        <li class="breadcrumb-item active" aria-current="page">@ViewData["Title"]</li>
+                        <li class="breadcrumb-item"><a href="#"><i class="bi bi-house-door"></i> الرئيسية</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="app-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="card-title"><i class="bi bi-info-circle"></i> إعدادات الموقع</h3>
+                        </div>
+                        <div class="card-body">
+                            <form asp-action="EditASetting" method="post" enctype="multipart/form-data">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <input type="hidden" asp-for="Id" />
+
+                                <div class="form-group mb-3">
+                                    <label class="control-label">الشعار الحالي</label>
+                                    @if (!string.IsNullOrEmpty(Model.Logo.ToString()))
+                                    {
+                                        <div class="mt-2">
+                                            <img src="data:image/png;base64,@Convert.ToBase64String(Model.Logo)" width="150" height="100" alt="الشعار" class="img-thumbnail" id="currentLogo" />
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <p class="text-muted">لا يوجد شعار مرفوع</p>
+                                    }
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label asp-for="LogoFile" class="control-label">رفع شعار جديد</label>
+                                    <input type="file" asp-for="LogoFile" class="form-control" id="logoUpload" accept="image/*" />
+                                    <span asp-validation-for="LogoFile" class="text-danger"></span>
+                                </div>
+
+                                <!-- معاينة الشعار الجديد -->
+                                <div class="form-group mb-3" id="logoPreviewContainer" style="display: none;">
+                                    <label class="control-label">معاينة الشعار الجديد</label>
+                                    <div class="mt-2">
+                                        <img id="logoPreview" src="#" alt="معاينة الشعار" class="img-thumbnail" style="max-width: 150px; max-height: 100px;" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label asp-for="Title" class="control-label">عنوان الموقع</label>
+                                    <input asp-for="Title" class="form-control" placeholder="أدخل عنوان الموقع" />
+                                    <span asp-validation-for="Title" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label asp-for="AboutUs" class="control-label">من نحن</label>
+                                    <textarea asp-for="AboutUs" class="form-control" rows="3" placeholder="أدخل معلومات عنا"></textarea>
+                                    <span asp-validation-for="AboutUs" class="text-danger"></span>
+                                </div>
+
+                                
+                                <!-- بريد الموقع -->
+                                <div class="form-group mb-3">
+                                    <label asp-for="Username" class="control-label">بريد الموقع</label>
+                                    <input asp-for="Username" class="form-control" placeholder="أدخل بريد الموقع" />
+                                    <span asp-validation-for="Username" class="text-danger"></span>
+                                </div>
+
+                                <!-- كلمة مرور البريد -->
+                                <div class="form-group mb-3">
+                                    <label asp-for="Password" class="control-label">كلمة مرور البريد</label>
+                                    <input asp-for="Password" class="form-control" placeholder="أدخل كلمة مرور البريد" />
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+
+                                <!-- البريد الإلكتروني المرسل -->
+                                <div class="form-group mb-3">
+                                    <label asp-for="FromEmail" class="control-label">البريد الإلكتروني المرسل</label>
+                                    <input asp-for="FromEmail" class="form-control" placeholder="أدخل البريد الإلكتروني المرسل" />
+                                    <span asp-validation-for="FromEmail" class="text-danger"></span>
+                                </div>
+
+                                <!-- اسم المرسل -->
+                                <div class="form-group mb-3">
+                                    <label asp-for="FromName" class="control-label">اسم المرسل</label>
+                                    <input asp-for="FromName" class="form-control" placeholder="أدخل اسم المرسل" />
+                                    <span asp-validation-for="FromName" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label asp-for="Facebook" class="control-label">رابط فيسبوك</label>
+                                    <input asp-for="Facebook" class="form-control" placeholder="أدخل رابط فيسبوك" />
+                                    <span asp-validation-for="Facebook" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label asp-for="Instagram" class="control-label">رابط إنستجرام</label>
+                                    <input asp-for="Instagram" class="form-control" placeholder="أدخل رابط إنستجرام" />
+                                    <span asp-validation-for="Instagram" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label asp-for="Twitter" class="control-label">رابط تويتر</label>
+                                    <input asp-for="Twitter" class="form-control" placeholder="أدخل رابط تويتر" />
+                                    <span asp-validation-for="Twitter" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label asp-for="TikTok" class="control-label">رابط تيك توك</label>
+                                    <input asp-for="TikTok" class="form-control" placeholder="أدخل رابط تيك توك" />
+                                    <span asp-validation-for="TikTok" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group text-end">
+                                    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> حفظ</button>
+                                    <a asp-action="Setting" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> رجوع</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        // معاينة الشعار عند اختيار ملف
+        document.getElementById('logoUpload').addEventListener('change', function (event) {
+            var file = event.target.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    // عرض معاينة الشعار
+                    document.getElementById('logoPreview').src = e.target.result;
+                    document.getElementById('logoPreviewContainer').style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            } else {
+                // إخفاء معاينة الشعار إذا لم يتم اختيار ملف
+                document.getElementById('logoPreviewContainer').style.display = 'none';
+            }
+        });
+    </script>
+}

@@ -1,0 +1,125 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>موقع اخبارى</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <link href="~/css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="~/css/footer.css" rel="stylesheet" />
+
+</head>
+<body>
+
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <!-- شعار الموقع -->
+                <img style=" height: 50px;
+                      margin-left: 15px;" src="@(ViewData["logo"] != null ? $"data:image/png;base64,{ViewData["logo"]}" : Url.Content("~/img/cropped-11zon_cropped.png"))"
+                     margin-right: 15px;
+                     alt="شعار الموقع">
+                <a class="navbar-brand" href="#">@Html.Raw(ViewData["titleSite"] ?? "قسد الكيان الأصفر")</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor02" style="text-align: center;">
+                    <ul class="navbar-nav me-auto">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About" > من نحن؟</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">تواصل معنا</a>
+                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Dashboard" asp-action="Index"> لوحة التحكم</a>
+                            </li>
+                        }
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/Home/Index" style="color: #ffcc00;">
+                                الرئيسية
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                     
+                       
+                    </ul>
+                    <partial name="_LoginPartial" />
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <partial name="PartialToster" />
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+  
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="@(ViewData["logo"] != null ? $"data:image/png;base64,{ViewData["logo"]}" : Url.Content("~/img/cropped-11zon_cropped.png"))" alt="شعار الموقع">
+                <p>@Html.Raw(ViewData["titleSite"] ?? "قسد الكيان الأصفر")</p>
+            </div>
+
+            <div class="footer-links">
+                <a asp-controller="Home" asp-action="About">من نحن؟</a>
+                <a asp-controller="Home" asp-action="Contact">تواصل معنا</a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a asp-controller="Dashboard" asp-action="Index">لوحة التحكم</a>
+                }
+                <a href="/Home/Index" style="color: #ffcc00;">الرئيسية</a>
+               
+            </div>
+
+            <div class="social-links">
+                @if (!string.IsNullOrEmpty(ViewData["facebook"] as string))
+                {
+                    <a href="@ViewData["facebook"]" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                }
+
+                @if (!string.IsNullOrEmpty(ViewData["twitter"] as string))
+                {
+                    <a href="@ViewData["twitter"]" target="_blank"><i class="fab fa-twitter"></i></a>
+                }
+
+                @if (!string.IsNullOrEmpty(ViewData["instagram"] as string))
+                {
+                    <a href="@ViewData["instagram"]" target="_blank"><i class="fab fa-instagram"></i></a>
+                }
+
+                @if (!string.IsNullOrEmpty(ViewData["tiktok"] as string))
+                {
+                    <a href="@ViewData["tiktok"]" target="_blank"><i class="fab fa-tiktok"></i></a>
+                }
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 جميع الحقوق محفوظة - @Html.Raw(ViewData["titleSite"] ?? "قسد الكيان الأصفر")</p>
+        </div>
+    </footer>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/scripte.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

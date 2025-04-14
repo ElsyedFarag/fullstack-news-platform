@@ -1,0 +1,116 @@
+﻿@model News_Models.Model.Message
+
+@{
+    ViewData["Title"] = "تعديل الرسالة";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<main class="app-main" style="text-align:end;">
+    <!--begin::App Content Header-->
+    <div class="app-content-header">
+        <!--begin::Container-->
+        <div class="container-fluid">
+            <!--begin::Row-->
+            <div class="row">
+                <div class="col-sm-6"><h3 class="mb-0"></h3></div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-end">
+                        <li class="breadcrumb-item active" aria-current="page">@ViewData["Title"]</li>
+                        <li class="breadcrumb-item"><a asp-action="Message">الرسائل</a></li>
+                        <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::App Content Header-->
+    <!--begin::App Content-->
+    <div class="app-content">
+        <!--begin::Container-->
+        <div class="container-fluid">
+            <!--begin::Row-->
+            <div class="row">
+                <div class="col-12">
+                    <!-- Default box -->
+                    <div class="card shadow-lg">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="card-title"><i class="fas fa-edit"></i> تعديل الرسالة</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-lte-toggle="card-collapse" title="Collapse">
+                                    <i data-lte-icon="expand" class="bi bi-plus-lg"></i>
+                                    <i data-lte-icon="collapse" class="bi bi-dash-lg"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool" data-lte-toggle="card-remove" title="Remove">
+                                    <i class="bi bi-x-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form asp-action="MessageEdit">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <input type="hidden" asp-for="Id" />
+
+                                <div class="form-group mb-3">
+                                    <label asp-for="Name" class="control-label"><i class="fas fa-user"></i> الاسم</label>
+                                    <input asp-for="Name" class="form-control" />
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label asp-for="Email" class="control-label"><i class="fas fa-envelope"></i> البريد الإلكتروني</label>
+                                    <input asp-for="Email" class="form-control" />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label asp-for="Content" class="control-label"><i class="fas fa-comment"></i> المحتوى</label>
+                                    <textarea asp-for="Content" class="form-control" rows="5"></textarea>
+                                    <span asp-validation-for="Content" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label asp-for="Status" class="control-label"><i class="fas fa-info-circle"></i> الحالة</label>
+                                    <select asp-for="Status" class="form-control">
+                                        <option value="Read">مقروء</option>
+                                        <option value="Unread">غير مقروء</option>
+                                    </select>
+                                    <span asp-validation-for="Status" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label asp-for="Reply" class="control-label"><i class="fas fa-reply"></i> الرد</label>
+                                    <textarea asp-for="Reply" class="form-control" rows="5"></textarea>
+                                    <span asp-validation-for="Reply" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label asp-for="IsArchived" class="control-label"><i class="fas fa-archive"></i> مؤرشف</label>
+                                    <input asp-for="IsArchived" class="form-check-input" />
+                                    <span asp-validation-for="IsArchived" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> حفظ</button>
+                                    <a asp-action="Message" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> العودة إلى القائمة</a>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::App Content-->
+</main>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

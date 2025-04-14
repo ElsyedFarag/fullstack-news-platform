@@ -1,0 +1,11 @@
+﻿.news-description {
+    display: inline;
+    word-wrap: break-word;
+    cursor: pointer;
+    color: #007bff; /* لون أزرق للإشارة إلى أنه يمكن النقر */
+    font-weight: bold;
+}
+
+    .news-description:hover {
+        text-decoration: underline; /* تأثير مرئي عند تمرير الماوس */
+    }
