@@ -39,17 +39,16 @@
 <!--begin::Body-->
 <body class="login-page bg-body-secondary">
     <partial name="PartialToster" />
+
     <div class="login-box">
-        <div class="card card-outline card-primary">
-            <div class="card-header">
-                <a href="assets/../index2.html"
-                   class="link-dark text-center link-offset-2 link-opacity-100 link-opacity-50-hover">
-                    <h1 class="mb-0"><b>Admin</b>LTE</h1>
-                </a>
-            </div>
+        <div class="login-logo">
+            <a href="../index2.html"><b>Admin</b>LTE</a>
+        </div>
+        <!-- /.login-logo -->
+        <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Sign in to start your session</p>
-                <form id="account" method="post">
+                <form  method="post">
                     <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
                     <div class="input-group mb-1">
                         <div class="form-floating">
@@ -68,33 +67,80 @@
                         <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
                     </div>
                     <span asp-validation-for="Input.Password" class="text-danger"></span>
-                    <!-- /.col -->
-                    <div class="col-4">
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary">Sign In</button>
-                        </div>
-                    </div>
-                </form>
-
-                    <!--begin::Row-->
                     <div class="row">
-                        <div class="col-8 d-inline-flex align-items-center">
+                        <div class="col-8">
                             <div class="form-check">
-                                <input asp-for="Input.RememberMe" class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                 <label class="form-check-label" for="flexCheckDefault"> Remember Me </label>
                             </div>
                         </div>
-
+                        <!-- /.col -->
+                        <div class="col-4">
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary">Sign In</button>
+                            </div>
+                        </div>
                         <!-- /.col -->
                     </div>
-                    <p class="mb-1"><a asp-page="./ForgotPassword">I forgot my password</a></p>
                     <!--end::Row-->
-
-
+                </form>
+                <div class="social-auth-links text-center mb-3 d-grid gap-2">
+                    <p>- OR -</p>
+                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+                        <div>
+                            <p>
+                                @foreach (var provider in Model.ExternalLogins!)
+                                {
+                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">
+                                        <i class="bi bi-facebook me-2"></i> Sign in using @provider.DisplayName
+                                    </button>
+@*                                     <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+ *@                                }
+                            </p>
+                        </div>
+                    </form>
+                  
+                </div>
+                <!-- /.social-auth-links -->
+                <p class="mb-1"><a href="forgot-password.html">I forgot my password</a></p>
+                <p class="mb-0">
+                    <a href="register.html" class="text-center"> Register a new membership </a>
+                </p>
             </div>
             <!-- /.login-card-body -->
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
     <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/browser/overlayscrollbars.browser.es6.min.js"
             integrity="sha256-dghWARbRe2eLlIJ56wNB+b760ywulqK3DzZYEpsg2fQ="
             crossorigin="anonymous"></script>

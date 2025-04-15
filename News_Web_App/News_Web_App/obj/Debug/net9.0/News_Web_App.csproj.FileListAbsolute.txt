@@ -720,3 +720,5 @@ D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\obj\Debug\net9.0\re
 D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\obj\Debug\net9.0\News_Web_App.pdb
 D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\obj\Debug\net9.0\News_Web_App.genruntimeconfig.cache
 D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\obj\Debug\net9.0\ref\News_Web_App.dll
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\obj\Debug\net9.0\News_Web_App.sourcelink.json
+D:\My project Dotnet\Web\Freelance\News_Web_App\News_Web_App\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.Google.dll

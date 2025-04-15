@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E9F7C40B-9BD8-46A6-92C2-89F07069AD67}|News_Web_App\\News_Web_App.csproj|d:\\my project dotnet\\web\\freelance\\news_web_app\\news_web_app\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9F7C40B-9BD8-46A6-92C2-89F07069AD67}|News_Web_App\\News_Web_App.csproj|solutionrelative:news_web_app\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9F7C40B-9BD8-46A6-92C2-89F07069AD67}|News_Web_App\\News_Web_App.csproj|d:\\my project dotnet\\web\\freelance\\news_web_app\\news_web_app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9F7C40B-9BD8-46A6-92C2-89F07069AD67}|News_Web_App\\News_Web_App.csproj|solutionrelative:news_web_app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Web_App\\Program.cs",
+              "RelativeDocumentMoniker": "News_Web_App\\Program.cs",
+              "ToolTip": "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Web_App\\Program.cs",
+              "RelativeToolTip": "News_Web_App\\Program.cs",
+              "ViewState": "AgIAAEQAAAAAIDMzMzMLwCsAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T23:17:57.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Web_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "News_Web_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Web_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "News_Web_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAUwF0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-14T22:33:20.902Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
