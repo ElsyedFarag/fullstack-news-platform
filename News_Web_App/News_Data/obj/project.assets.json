@@ -5848,11 +5848,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Data\\News_Data.csproj",
+      "projectUniqueName": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Data\\News_Data.csproj",
       "projectName": "News_Data",
-      "projectPath": "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Data\\News_Data.csproj",
+      "projectPath": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Data\\News_Data.csproj",
       "packagesPath": "C:\\Users\\win 11\\.nuget\\packages\\",
-      "outputPath": "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Data\\obj\\",
+      "outputPath": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
@@ -5876,8 +5876,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Models\\News_Models.csproj": {
-              "projectPath": "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Models\\News_Models.csproj"
+            "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Models\\News_Models.csproj": {
+              "projectPath": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Models\\News_Models.csproj"
             }
           }
         }

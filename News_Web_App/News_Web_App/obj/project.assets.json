@@ -693,6 +693,22 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Microsoft.AspNetCore.Authentication.MicrosoftAccount/9.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.AspNetCore.Authentication.MicrosoftAccount.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.Authentication.MicrosoftAccount.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Authorization/2.3.0": {
         "type": "package",
         "dependencies": {
@@ -4277,6 +4293,21 @@
         "lib/net9.0/Microsoft.AspNetCore.Authentication.Google.xml",
         "microsoft.aspnetcore.authentication.google.9.0.4.nupkg.sha512",
         "microsoft.aspnetcore.authentication.google.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.MicrosoftAccount/9.0.4": {
+      "sha512": "ksE8rQ+Zz7EKLb4e/Y7+tWY9dKkh9GH7tRRWRL2y7vHQFnWg3F9iwHwKUetHv2fAXJaRlne6s2HVakRU02KgpA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.microsoftaccount/9.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net9.0/Microsoft.AspNetCore.Authentication.MicrosoftAccount.dll",
+        "lib/net9.0/Microsoft.AspNetCore.Authentication.MicrosoftAccount.xml",
+        "microsoft.aspnetcore.authentication.microsoftaccount.9.0.4.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.microsoftaccount.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authorization/2.3.0": {
@@ -8975,6 +9006,7 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "Microsoft.AspNetCore.Authentication.Google >= 9.0.4",
+      "Microsoft.AspNetCore.Authentication.MicrosoftAccount >= 9.0.4",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 9.0.0",
       "Microsoft.AspNetCore.Identity.UI >= 9.0.0",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 9.0.2",
@@ -8996,11 +9028,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Web_App\\News_Web_App.csproj",
+      "projectUniqueName": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\News_Web_App.csproj",
       "projectName": "News_Web_App",
-      "projectPath": "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Web_App\\News_Web_App.csproj",
+      "projectPath": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\News_Web_App.csproj",
       "packagesPath": "C:\\Users\\win 11\\.nuget\\packages\\",
-      "outputPath": "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Web_App\\obj\\",
+      "outputPath": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
@@ -9024,11 +9056,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Data\\News_Data.csproj": {
-              "projectPath": "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Data\\News_Data.csproj"
+            "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Data\\News_Data.csproj": {
+              "projectPath": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Data\\News_Data.csproj"
             },
-            "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Models\\News_Models.csproj": {
-              "projectPath": "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Models\\News_Models.csproj"
+            "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Models\\News_Models.csproj": {
+              "projectPath": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Models\\News_Models.csproj"
             }
           }
         }
@@ -9050,6 +9082,10 @@
         "targetAlias": "net9.0",
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.Google": {
+            "target": "Package",
+            "version": "[9.0.4, )"
+          },
+          "Microsoft.AspNetCore.Authentication.MicrosoftAccount": {
             "target": "Package",
             "version": "[9.0.4, )"
           },

@@ -4447,11 +4447,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Models\\News_Models.csproj",
+      "projectUniqueName": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Models\\News_Models.csproj",
       "projectName": "News_Models",
-      "projectPath": "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Models\\News_Models.csproj",
+      "projectPath": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Models\\News_Models.csproj",
       "packagesPath": "C:\\Users\\win 11\\.nuget\\packages\\",
-      "outputPath": "D:\\My project Dotnet\\Web\\Freelance\\News_Web_App\\News_Models\\obj\\",
+      "outputPath": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
