@@ -8,6 +8,7 @@ using News_Models.Model;
 using News_Web_App;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Http.Features;
+using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,16 +40,18 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddAuthentication()
-    .AddGoogle(options =>
-    {
-        options.ClientId = "976102445799-3v3iiej1lhflpdsfqsit1ln7m5plu1vi.apps.googleusercontent.com";
-        options.ClientSecret = "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";
-    })
-.AddMicrosoftAccount(options =>
-{
-    options.ClientId = "e72651a6-b24f-4af1-b5b8-a5cf09dc108c";
-    options.ClientSecret = "Erx8Q~KyY7um6jo5heToyxFqtqtfeIVIG~lsQc7p";
-});
+                .AddGoogle(options =>
+                {
+                    IConfigurationSection googleAuthSection = builder.Configuration.GetSection("Authentication:Google");
+
+                    options.ClientId = googleAuthSection["ClientId"]!;
+                    options.ClientSecret = googleAuthSection["ClientSecret"]!;
+                })
+                .AddMicrosoftAccount(microsoftOptions =>
+                {
+                    microsoftOptions.ClientId = builder.Configuration["Authentication:Microsoft:ClientId"]!;
+                    microsoftOptions.ClientSecret = builder.Configuration["Authentication:Microsoft:ClientSecret"]!;
+                });
 // تسجيل خدمات أخرى
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
