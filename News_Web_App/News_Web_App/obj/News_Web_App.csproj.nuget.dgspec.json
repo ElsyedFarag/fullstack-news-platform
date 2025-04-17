@@ -11,7 +11,7 @@
         "projectName": "News_Data",
         "projectPath": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Data\\News_Data.csproj",
         "packagesPath": "C:\\Users\\win 11\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Data\\obj\\",
+        "outputPath": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
@@ -195,7 +195,7 @@
         "projectName": "News_Web_App",
         "projectPath": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\News_Web_App.csproj",
         "packagesPath": "C:\\Users\\win 11\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\obj\\",
+        "outputPath": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
