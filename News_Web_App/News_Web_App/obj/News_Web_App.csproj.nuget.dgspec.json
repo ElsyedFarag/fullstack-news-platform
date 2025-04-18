@@ -11,7 +11,7 @@
         "projectName": "News_Data",
         "projectPath": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Data\\News_Data.csproj",
         "packagesPath": "C:\\Users\\win 11\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Data\\obj\\",
+        "outputPath": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
@@ -113,7 +113,7 @@
         "projectName": "News_Models",
         "projectPath": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Models\\News_Models.csproj",
         "packagesPath": "C:\\Users\\win 11\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Models\\obj\\",
+        "outputPath": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
@@ -195,7 +195,7 @@
         "projectName": "News_Web_App",
         "projectPath": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\News_Web_App.csproj",
         "packagesPath": "C:\\Users\\win 11\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\obj\\",
+        "outputPath": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
@@ -263,6 +263,10 @@
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[9.0.2, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Core": {
+              "target": "Package",
+              "version": "[1.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

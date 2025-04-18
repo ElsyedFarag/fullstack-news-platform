@@ -1,335 +1,343 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\News_Web_App.bundle.scp.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\News_Web_App.bundle.scp.css",
       "PackagePath": "staticwebassets\\News_Web_App.ids75f5sim.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\admin\\css\\adminlte.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\Sounds\\notification.wav",
+      "PackagePath": "staticwebassets\\Sounds\\notification.wav"
+    },
+    {
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\admin\\css\\adminlte.css",
       "PackagePath": "staticwebassets\\admin\\css\\adminlte.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\admin\\js\\adminlte.js",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\admin\\js\\adminlte.js",
       "PackagePath": "staticwebassets\\admin\\js\\adminlte.js"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\css\\Tooltip.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\css\\Tooltip.css",
       "PackagePath": "staticwebassets\\css\\Tooltip.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\css\\about.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\css\\about.css",
       "PackagePath": "staticwebassets\\css\\about.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\css\\all.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\css\\all.css",
       "PackagePath": "staticwebassets\\css\\all.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\css\\footer.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\css\\footer.css",
       "PackagePath": "staticwebassets\\css\\footer.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\css\\more.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\css\\more.css",
       "PackagePath": "staticwebassets\\css\\more.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\img\\AdminLTELogo.png",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\img\\AdminLTELogo.png",
       "PackagePath": "staticwebassets\\img\\AdminLTELogo.png"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\img\\cropped-11zon_cropped.png",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\img\\cropped-11zon_cropped.png",
       "PackagePath": "staticwebassets\\img\\cropped-11zon_cropped.png"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\img\\icons8-user-64.png",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\img\\icons8-user-64.png",
       "PackagePath": "staticwebassets\\img\\icons8-user-64.png"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\img\\icons8-video-80.png",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\img\\icons8-video-80.png",
       "PackagePath": "staticwebassets\\img\\icons8-video-80.png"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\img\\user-photo.png",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\img\\user-photo.png",
       "PackagePath": "staticwebassets\\img\\user-photo.png"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\img\\user2-160x160.jpg",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\img\\user2-160x160.jpg",
       "PackagePath": "staticwebassets\\img\\user2-160x160.jpg"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery\\dist\\jquery.slim.js",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery\\dist\\jquery.slim.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.js"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.js",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.js"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\06ebedaf-cb0f-4952-8b21-9de668f3e888.mp4",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\06ebedaf-cb0f-4952-8b21-9de668f3e888.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\06ebedaf-cb0f-4952-8b21-9de668f3e888.mp4"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\1f8f53a7-6559-4fc4-8089-3b6a6664e603.mp4",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\0c413670-a433-4c82-a835-76e8a53f5d77.mp4",
+      "PackagePath": "staticwebassets\\uploads\\videos\\0c413670-a433-4c82-a835-76e8a53f5d77.mp4"
+    },
+    {
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\1f8f53a7-6559-4fc4-8089-3b6a6664e603.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\1f8f53a7-6559-4fc4-8089-3b6a6664e603.mp4"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\74b66d18-a248-48a3-919b-12499d3a7fd9.mp4",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\74b66d18-a248-48a3-919b-12499d3a7fd9.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\74b66d18-a248-48a3-919b-12499d3a7fd9.mp4"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\767c65c4-fcce-45cc-bf36-4e6ce3fa292d.mp4",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\767c65c4-fcce-45cc-bf36-4e6ce3fa292d.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\767c65c4-fcce-45cc-bf36-4e6ce3fa292d.mp4"
     },
     {
-      "Id": "C:\\Users\\win 11\\Source\\Repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\8189172b-51cc-40cf-aed1-4d43eb214d23.mp4",
+      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\8189172b-51cc-40cf-aed1-4d43eb214d23.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\8189172b-51cc-40cf-aed1-4d43eb214d23.mp4"
     },
     {

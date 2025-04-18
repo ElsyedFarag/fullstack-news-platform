@@ -177,6 +177,12 @@ namespace News_Data.Migrations
                     b.Property<int>("NewsId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Reply")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("NewsId");

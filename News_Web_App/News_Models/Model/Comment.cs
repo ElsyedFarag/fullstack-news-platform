@@ -8,6 +8,8 @@ namespace News_Models.Model
         public string Author { get; set; }
         public string Content { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public MessageStatus Status { get; set; } = MessageStatus.UnRead;
+        public string? Reply { get; set; } // رد المسؤول على الرسالة 
         public News News { get; set; }
 
     }

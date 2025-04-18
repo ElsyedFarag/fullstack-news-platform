@@ -8574,7 +8574,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 13:57:18 GMT"
+          "Value": "Thu, 17 Apr 2025 17:27:59 GMT"
         },
         {
           "Name": "Vary",
@@ -8623,7 +8623,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 13:57:18 GMT"
+          "Value": "Thu, 17 Apr 2025 17:27:59 GMT"
         }
       ],
       "EndpointProperties": [
@@ -8672,7 +8672,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 13:57:18 GMT"
+          "Value": "Thu, 17 Apr 2025 17:27:59 GMT"
         },
         {
           "Name": "Vary",
@@ -8735,7 +8735,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 13:57:18 GMT"
+          "Value": "Thu, 17 Apr 2025 17:27:59 GMT"
         },
         {
           "Name": "Vary",
@@ -8776,7 +8776,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 13:57:18 GMT"
+          "Value": "Thu, 17 Apr 2025 17:27:59 GMT"
         }
       ],
       "EndpointProperties": [
@@ -8817,7 +8817,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 13:57:18 GMT"
+          "Value": "Thu, 17 Apr 2025 17:27:59 GMT"
         },
         {
           "Name": "Vary",
@@ -8828,6 +8828,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-Z3++AjGFVzJRlyAxbH41be7mDBJn48iTDrEhr2E7VCo="
+        }
+      ]
+    },
+    {
+      "Route": "Sounds/notification.s3zxdq3ux5.wav",
+      "AssetFile": "Sounds/notification.wav.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000004817350"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "207582"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "audio/wav"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BeYgt1Yvgb7vwXqy3Ge2gqqiF0xrG89XwCe51bAQ5Nw=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"CEt4Rj4w2uSqxe2/npyTze5ezkpKaINS5qK2aG+bH0o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 16:14:56 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s3zxdq3ux5"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CEt4Rj4w2uSqxe2/npyTze5ezkpKaINS5qK2aG+bH0o="
+        },
+        {
+          "Name": "label",
+          "Value": "Sounds/notification.wav"
+        }
+      ]
+    },
+    {
+      "Route": "Sounds/notification.s3zxdq3ux5.wav",
+      "AssetFile": "Sounds/notification.wav",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "345970"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "audio/wav"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CEt4Rj4w2uSqxe2/npyTze5ezkpKaINS5qK2aG+bH0o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 16:14:56 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s3zxdq3ux5"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CEt4Rj4w2uSqxe2/npyTze5ezkpKaINS5qK2aG+bH0o="
+        },
+        {
+          "Name": "label",
+          "Value": "Sounds/notification.wav"
+        }
+      ]
+    },
+    {
+      "Route": "Sounds/notification.s3zxdq3ux5.wav.gz",
+      "AssetFile": "Sounds/notification.wav.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "207582"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "audio/wav"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BeYgt1Yvgb7vwXqy3Ge2gqqiF0xrG89XwCe51bAQ5Nw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 16:14:56 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s3zxdq3ux5"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BeYgt1Yvgb7vwXqy3Ge2gqqiF0xrG89XwCe51bAQ5Nw="
+        },
+        {
+          "Name": "label",
+          "Value": "Sounds/notification.wav.gz"
+        }
+      ]
+    },
+    {
+      "Route": "Sounds/notification.wav",
+      "AssetFile": "Sounds/notification.wav.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000004817350"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "207582"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "audio/wav"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BeYgt1Yvgb7vwXqy3Ge2gqqiF0xrG89XwCe51bAQ5Nw=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"CEt4Rj4w2uSqxe2/npyTze5ezkpKaINS5qK2aG+bH0o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 16:14:56 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CEt4Rj4w2uSqxe2/npyTze5ezkpKaINS5qK2aG+bH0o="
+        }
+      ]
+    },
+    {
+      "Route": "Sounds/notification.wav",
+      "AssetFile": "Sounds/notification.wav",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "345970"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "audio/wav"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CEt4Rj4w2uSqxe2/npyTze5ezkpKaINS5qK2aG+bH0o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 16:14:56 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CEt4Rj4w2uSqxe2/npyTze5ezkpKaINS5qK2aG+bH0o="
+        }
+      ]
+    },
+    {
+      "Route": "Sounds/notification.wav.gz",
+      "AssetFile": "Sounds/notification.wav.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "207582"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "audio/wav"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BeYgt1Yvgb7vwXqy3Ge2gqqiF0xrG89XwCe51bAQ5Nw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 16:14:56 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BeYgt1Yvgb7vwXqy3Ge2gqqiF0xrG89XwCe51bAQ5Nw="
         }
       ]
     },
@@ -30344,6 +30642,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-5K24RCFsSUI2UQXIzqrdeCZDw4o2PCxSreru8SVoFbo="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/videos/0c413670-a433-4c82-a835-76e8a53f5d77.77fhinuynw.mp4",
+      "AssetFile": "uploads/videos/0c413670-a433-4c82-a835-76e8a53f5d77.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47682956"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M9Xd/T1eCLZqCtEShMe01EgnDcsJ7mlDOI28WhAfBMs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 23:37:34 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "77fhinuynw"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-M9Xd/T1eCLZqCtEShMe01EgnDcsJ7mlDOI28WhAfBMs="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/videos/0c413670-a433-4c82-a835-76e8a53f5d77.mp4"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/videos/0c413670-a433-4c82-a835-76e8a53f5d77.mp4",
+      "AssetFile": "uploads/videos/0c413670-a433-4c82-a835-76e8a53f5d77.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47682956"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M9Xd/T1eCLZqCtEShMe01EgnDcsJ7mlDOI28WhAfBMs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 23:37:34 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-M9Xd/T1eCLZqCtEShMe01EgnDcsJ7mlDOI28WhAfBMs="
         }
       ]
     },

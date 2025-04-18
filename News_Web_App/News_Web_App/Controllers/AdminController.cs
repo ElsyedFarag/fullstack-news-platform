@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using News_Models.Model; 
+using News_Models.Extenssions;
+using News_Models.Model;
+using News_Models.ModelVM;
 using News_Models.Repositories;
 using News_Web_App.Commponents;
 using System.Security.Claims;
@@ -187,6 +189,54 @@ namespace News_Web_App.Controllers
             }
         }
 
+
+        [Authorize(Roles = $"{RoleConst.AdminRole},{RoleConst.AdminHelper},{RoleConst.Editor}")]
+        [HttpGet]
+        public IActionResult GetMessagesAndComments()
+        {
+            // احضار بيانات الرسائل غير المقروءة من قاعدة البيانات بطريقة غير متزامنة
+            var messages = _unitOfWork.GetRepository<Message>()
+                                           .GetAllAsync(x => x.Status == MessageStatus.UnRead).Result;
+            var comments = _unitOfWork.GetRepository<Comment>().GetAllAsync(x => x.Status == MessageStatus.UnRead).Result;
+            messages = messages.OrderByDescending(x => x.Created);
+            var allMessage = messages?
+                .Select(m => new MassegeVM
+                {
+                    Id = m.Id,
+                    Name = m.Name,
+                    Content = m.Content,
+                    Created = m.Created.ToUniversalTime().TimeAgo()
+                })
+                .Take(3)
+                .ToList();
+
+            comments = comments.OrderByDescending(x => x.CreatedAt);
+            var allComments= comments?
+                .Select(m => new CommentVM
+                {
+                    Id = m.Id,
+                    CreatedAt = m.CreatedAt.ToUniversalTime().TimeAgo(),
+                    NewsId = m.NewsId,
+                    Content = m.Content,
+                    Author = m.Author,
+                    Reply = m.Reply,
+                    Status = m.Status,
+                })
+                .Take(3)
+                .ToList();
+
+            var countMesaage = messages?.Count() ?? 0;
+            var countComments = comments?.Count() ?? 0;
+            var data = new
+            {
+                countMesaage,
+                countComments,
+                allMessage,
+                allComments,
+
+            };
+            return Ok(data);
+        }
 
         [Authorize(Roles = $"{RoleConst.AdminRole},{RoleConst.AdminHelper}")]
 
@@ -510,22 +560,6 @@ namespace News_Web_App.Controllers
             return Json(new { success = true, message = "تم حذف الخبر بنجاح" });
         }
 
-        public override void OnActionExecuting(ActionExecutingContext context)
-        {
-
-            // احضار بيانات الرسائل غير المقروءة من قاعدة البيانات بطريقة غير متزامنة
-            var messages = _unitOfWork.GetRepository<Message>()
-                                           .GetAllAsync(x => x.Status == MessageStatus.UnRead).Result;
-
-            messages = messages.OrderByDescending(x => x.Created);
-            // إعداد بيانات العرض
-            ViewData["Message"] = messages?.Take(3).ToList()?? new List<Message>();
-            ViewData["MessageCount"] = messages?.Count() ?? 0;
-
-
-
-            base.OnActionExecuting(context);
-        }
     }
 
 }

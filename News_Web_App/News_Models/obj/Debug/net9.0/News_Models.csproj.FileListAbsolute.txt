@@ -10,16 +10,16 @@ D:\My project Dotnet\Web\Freelance\News_Web_App\News_Models\obj\Debug\net9.0\New
 D:\My project Dotnet\Web\Freelance\News_Web_App\News_Models\obj\Debug\net9.0\refint\News_Models.dll
 D:\My project Dotnet\Web\Freelance\News_Web_App\News_Models\obj\Debug\net9.0\News_Models.pdb
 D:\My project Dotnet\Web\Freelance\News_Web_App\News_Models\obj\Debug\net9.0\ref\News_Models.dll
-C:\Users\win 11\Source\Repos\fullstack-news-platform\News_Web_App\News_Models\bin\Debug\net9.0\News_Models.deps.json
-C:\Users\win 11\Source\Repos\fullstack-news-platform\News_Web_App\News_Models\bin\Debug\net9.0\News_Models.dll
-C:\Users\win 11\Source\Repos\fullstack-news-platform\News_Web_App\News_Models\bin\Debug\net9.0\News_Models.pdb
-C:\Users\win 11\Source\Repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\News_Models.csproj.AssemblyReference.cache
-C:\Users\win 11\Source\Repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\News_Models.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\win 11\Source\Repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\News_Models.AssemblyInfoInputs.cache
-C:\Users\win 11\Source\Repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\News_Models.AssemblyInfo.cs
-C:\Users\win 11\Source\Repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\News_Models.csproj.CoreCompileInputs.cache
-C:\Users\win 11\Source\Repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\News_Models.sourcelink.json
-C:\Users\win 11\Source\Repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\News_Models.dll
-C:\Users\win 11\Source\Repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\refint\News_Models.dll
-C:\Users\win 11\Source\Repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\News_Models.pdb
-C:\Users\win 11\Source\Repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\ref\News_Models.dll
+C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Models\bin\Debug\net9.0\News_Models.deps.json
+C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Models\bin\Debug\net9.0\News_Models.dll
+C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Models\bin\Debug\net9.0\News_Models.pdb
+C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\News_Models.csproj.AssemblyReference.cache
+C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\News_Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\News_Models.AssemblyInfoInputs.cache
+C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\News_Models.AssemblyInfo.cs
+C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\News_Models.csproj.CoreCompileInputs.cache
+C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\News_Models.sourcelink.json
+C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\News_Models.dll
+C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\refint\News_Models.dll
+C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\News_Models.pdb
+C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Models\obj\Debug\net9.0\ref\News_Models.dll

@@ -268,21 +268,6 @@ namespace WebUI.Areas.Admin.Controllers
             }
             return (IUserEmailStore<User>)_userStore;
         }
-        public override void OnActionExecuting(ActionExecutingContext context)
-        {
-
-            // احضار بيانات الرسائل غير المقروءة من قاعدة البيانات بطريقة غير متزامنة
-            var messages = _unitOfWork.GetRepository<Message>()
-                                           .GetAllAsync(x => x.Status == MessageStatus.UnRead).Result;
-            messages = messages.OrderByDescending(x => x.Created);
-
-            // إعداد بيانات العرض
-            ViewData["Message"] = messages?.Take(3).ToList() ?? new List<Message>();
-            ViewData["MessageCount"] = messages?.Count() ?? 0;
-
-
-
-            base.OnActionExecuting(context);
-        }
+        
     }
 }

@@ -6,12 +6,15 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic;
+using News_Models.Extenssions;
 using News_Models.Model;
 using News_Models.ModelVM;
 using News_Models.Repositories;
 using News_Models.UserVM;
+using News_Web_App.Commponents;
 using News_Web_App.Models;
 using X.PagedList.Extensions;
 
@@ -22,11 +25,14 @@ namespace News_Web_App.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IUnitOfWork _unitOfWork;
         private readonly UserManager<User> _userManager;
-        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork, UserManager<User> userManager)
+        private readonly IHubContext<NotificationHub> hubContext;
+
+        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork, UserManager<User> userManager, IHubContext<NotificationHub> hubContext)
         {
             _logger = logger;
             _unitOfWork=unitOfWork;
             _userManager=userManager;
+            this.hubContext=hubContext;
         }
 
         public async Task<IActionResult> Index(int? Page)
@@ -176,7 +182,13 @@ namespace News_Web_App.Controllers
                 collection.Created = DateTime.Now;
                 await _unitOfWork.GetRepository<Message>().AddAsync(collection);
                 await _unitOfWork.SaveChangesAsync();
-
+                await hubContext.Clients.All.SendAsync("ReceiveNotification", new
+                {
+                    id = collection.Id,
+                    name = collection.Name,
+                    content = collection.Content,
+                    timeAgo = collection.Created.TimeAgo() // „À·«: „‰– œﬁÌﬁ…
+                });
                 TempData["SuccessMessage"] = " „ ≈—”«· «·—”«·… »‰Ã«Õ!";
                 return View(collection);
 
