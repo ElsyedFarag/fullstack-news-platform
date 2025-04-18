@@ -545,6 +545,11 @@ namespace News_Web_App.Controllers
             }
         }
 
+        public async Task<IActionResult> Comment()
+        {
+            var comments = await _unitOfWork.GetRepository<Comment>().GetAllAsync();
+            return View(comments);
+        }
         [HttpDelete]
         public async Task<IActionResult> RemoveMessage(int? id)
         {

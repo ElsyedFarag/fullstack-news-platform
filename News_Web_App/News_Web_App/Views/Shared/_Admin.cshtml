@@ -277,6 +277,12 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
+                                    <a href="/Admin/Comment" class="nav-link">
+                                        <i class="bi bi-chat-dots"></i> <!-- أيقونة الرسائل -->
+                                        <p>Comments</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
                                     <a href="/Admin/Message" class="nav-link">
                                         <i class="nav-icon bi bi-envelope-fill"></i> <!-- أيقونة الرسائل -->
                                         <p>Messages</p>
@@ -317,7 +323,7 @@
         const connection = new signalR.HubConnectionBuilder()
             .withUrl("/notificationHub")
             .build();
-
+           
         connection.on("ReceiveNotification", function (message) {
             const sound = document.getElementById("notificationSound");
             if (sound) sound.play();
@@ -332,6 +338,9 @@
             const menu = document.getElementById("messagesDropdownMenu");
             const newItem = createMessageItem(message);
             menu.insertBefore(newItem, menu.firstChild);
+
+            
+
         });
 
         connection.start().catch(err => console.error(err.toString()));
@@ -361,7 +370,7 @@
                                 <span class="float-start fs-7 text-danger">
                                     <i class="bi bi-star-fill"></i>
                                 </span>
-                                <span>${message.name}</span>
+                                <span>${message.name+ ' '+ message.status}</span>
                             </h3>
                             <p class="fs-7 text-end">${content}</p>
                             <p class="fs-7 text-secondary text-end">${message.created || message.timeAgo} <i class="bi bi-clock-fill ms-1"></i></p>

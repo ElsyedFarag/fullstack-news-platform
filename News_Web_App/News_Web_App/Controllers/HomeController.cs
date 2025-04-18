@@ -1,3 +1,4 @@
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Globalization;
 using System.Threading.Tasks;
@@ -146,7 +147,14 @@ namespace News_Web_App.Controllers
                 CreatedAt = now.ToString("dd MMMM yyyy", new CultureInfo("ar-AE")),
                 CountComment = commentCount
             };
-
+            await hubContext.Clients.All.SendAsync("ReceiveNotification", new
+            {
+               id = 0,
+               name =   commentModel.Author,
+               content = commentModel.Content,
+               timeAgo = now.TimeAgo(),
+               status = "ﬁ«„ »«· ⁄·Ìﬁ ⁄·Ï „‰‘Ê—"
+            });
             return Json(new
             {
                 success = true,
@@ -187,7 +195,9 @@ namespace News_Web_App.Controllers
                     id = collection.Id,
                     name = collection.Name,
                     content = collection.Content,
-                    timeAgo = collection.Created.TimeAgo() // „À·«: „‰– œﬁÌﬁ…
+                    timeAgo = collection.Created.TimeAgo(),
+                    status = "ﬁ«„ »«—”«· —”«·…"
+                    // „À·«: „‰– œﬁÌﬁ…
                 });
                 TempData["SuccessMessage"] = " „ ≈—”«· «·—”«·… »‰Ã«Õ!";
                 return View(collection);
