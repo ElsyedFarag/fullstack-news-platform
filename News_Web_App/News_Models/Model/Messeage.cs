@@ -31,7 +31,7 @@ namespace News_Models.Model
     public enum MessageStatus
     {
         None,
-        Read,
-        UnRead
+        Read = 0,
+        UnRead = 1
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.EntityFrameworkCore;
 using News_Models.Extenssions;
 using News_Models.Model;
 using News_Models.ModelVM;
@@ -219,7 +220,6 @@ namespace News_Web_App.Controllers
                     NewsId = m.NewsId,
                     Content = m.Content,
                     Author = m.Author,
-                    Reply = m.Reply,
                     Status = m.Status,
                 })
                 .Take(3)
@@ -550,6 +550,57 @@ namespace News_Web_App.Controllers
             var comments = await _unitOfWork.GetRepository<Comment>().GetAllAsync();
             return View(comments);
         }
+
+        public async Task<IActionResult> DeleteComment(int id)
+        {
+            var comment = await _unitOfWork
+                .GetRepository<Comment>()
+                .GetByIdAsync(id);
+            if (comment == null)
+                return NotFound();
+            await _unitOfWork.GetRepository<Comment>().DeleteAsync(comment);   
+            await _unitOfWork.SaveChangesAsync();
+            TempData["SuccessMessage"] = "تمت حذف التعليق بنجاح!";
+
+            return RedirectToAction("Comment");
+        }
+
+        public async Task<IActionResult> ViewComment(int id)
+        {
+            var comment = await _unitOfWork
+                .GetRepository<Comment>()
+                .GetByIdAsync(id);
+            var news = await _unitOfWork .GetRepository<News>().GetByIdAsync(comment.NewsId);
+            if (comment == null)
+                return NotFound();
+            
+            comment.News = news;
+            return View(comment);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> ReplyComment(int id)
+        {
+            var commentRepo = _unitOfWork.GetRepository<Comment>();
+            var comment = await commentRepo.GetByIdAsync(id);
+
+            if (comment == null)
+                return NotFound();
+
+            // Toggle status
+            comment.Status = comment.Status == MessageStatus.Read
+                             ? MessageStatus.UnRead
+                             : MessageStatus.Read;
+
+            await commentRepo.UpdateAsync(comment);
+            await _unitOfWork.SaveChangesAsync();
+
+            TempData["Success"] = "تم تغيير الحالة بنجاح.";
+            return RedirectToAction(nameof(ViewComment), new { id });
+        }
+
+
         [HttpDelete]
         public async Task<IActionResult> RemoveMessage(int? id)
         {

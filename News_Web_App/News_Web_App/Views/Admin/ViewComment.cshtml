@@ -1,0 +1,118 @@
+﻿@using News_Models.Extenssions
+@using News_Models.Model
+@model News_Models.Model.Comment
+
+@{
+    ViewData["Title"] = "التعليقات";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<main class="app-main text-end">
+    <!-- العنوان -->
+    <div class="app-content-header py-3">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-start">
+                    <h3 class="mb-0">إدارة التعليقات</h3>
+                </div>
+                <div class="col-md-6">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb float-end mb-0 bg-transparent p-0">
+                            <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">@ViewData["Title"]</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- تفاصيل التعليق -->
+    <div class="app-content">
+        <div class="container-fluid">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-header bg-primary text-white rounded-top-4">
+                    <h5 class="mb-0"><i class="bi bi-chat-left-text me-2"></i>تفاصيل التعليق</h5>
+                </div>
+                <div class="card-body bg-light">
+
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success">@TempData["Success"]</div>
+                    }
+
+                    <div class="row gy-4">
+
+                        <div class="col-md-6">
+                            <div class="bg-white p-3 shadow-sm rounded-3">
+                                <h6 class="text-muted"><i class="bi bi-person me-1"></i> الكاتب</h6>
+                                <p class="mb-0 fw-semibold">@Model.Author</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="bg-white p-3 shadow-sm rounded-3">
+                                <h6 class="text-muted"><i class="bi bi-calendar-check me-1"></i> تاريخ الإنشاء</h6>
+                                <p class="mb-0 fw-semibold">@Model.CreatedAt.ToString("yyyy/MM/dd HH:mm")</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="bg-white p-3 shadow-sm rounded-3">
+                                <h6 class="text-muted"><i class="bi bi-chat-dots me-1"></i> نص التعليق</h6>
+                                <p class="mb-0 fw-semibold">@Model.Content</p>
+                            </div>
+                        </div>
+
+                        <!-- نموذج تعديل الرد والحالة -->
+                        <div class="col-md-12">
+                            <div class="bg-white p-3 shadow-sm rounded-3">
+                                <h6 class="text-muted"><i class="bi bi-reply me-1"></i> حالة التعليق</h6>
+
+                                <form asp-action="ReplyComment" method="post">
+                                    <input type="hidden" name="Id" value="@Model.Id" />
+
+                                   
+
+                                    <div class="mb-2">
+                                        <select name="Status" class="form-select">
+                                            <option value="0" selected="@(Model.Status == News_Models.Model.MessageStatus.UnRead)">غير مقروء</option>
+                                            <option value="1" selected="@(Model.Status == News_Models.Model.MessageStatus.Read)">مقروء</option>
+                                        </select>
+
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-success"><i class="bi bi-send me-1"></i> حفظ التعديلات</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="bg-white p-3 shadow-sm rounded-3">
+                                <h6 class="text-muted"><i class="bi bi-newspaper me-1"></i> الخبر المرتبط</h6>
+
+                                @if (Model.News != null)
+                                {
+                                    <a class="btn btn-outline-primary"
+                                       href="/Home/Details/@(Model.News.Id)#comment-@Model.Id">
+                                        <i class="bi bi-link-45deg me-1"></i> الانتقال إلى الخبر
+                                    </a>
+                                }
+                                else
+                                {
+                                    <p class="mb-0 fw-semibold text-danger">لا يوجد خبر مرتبط</p>
+                                }
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="card-footer d-flex bg-white rounded-bottom-4">
+                    <a class="btn btn-outline-secondary" asp-action="Comment" style="width:230px"><i class="bi bi-arrow-left-circle me-1"></i> رجوع</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

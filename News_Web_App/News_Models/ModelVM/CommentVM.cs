@@ -15,6 +15,5 @@ namespace News_Models.ModelVM
         public string Content { get; set; }
         public string CreatedAt { get; set; } 
         public MessageStatus Status { get; set; } = MessageStatus.UnRead;
-        public string? Reply { get; set; } // رد المسؤول على الرسالة 
     }
 }

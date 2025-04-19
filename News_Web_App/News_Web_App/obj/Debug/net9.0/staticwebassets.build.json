@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Rbz/Z+X7XpHWncAbj8xpsrY7CFE1ckWgcmwd9OlE+7I=",
+  "Hash": "XgoPD7m+K7bacWsWoB6pk6rqGImCvzb6FTedwFGv+V4=",
   "Source": "News_Web_App",
   "BasePath": "_content/News_Web_App",
   "Mode": "Default",
@@ -5918,6 +5918,48 @@
       "OriginalItemSpec": "wwwroot\\uploads\\videos\\1f8f53a7-6559-4fc4-8089-3b6a6664e603.mp4"
     },
     {
+      "Identity": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\1ff9552b-8d1e-4ca5-ab32-2149e314f901.mp4",
+      "SourceId": "News_Web_App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\",
+      "BasePath": "_content/News_Web_App",
+      "RelativePath": "uploads/videos/1ff9552b-8d1e-4ca5-ab32-2149e314f901#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "g0wh4dit4z",
+      "Integrity": "sAumFrzHKqiWmraEBkkPv9/sx6GB1UgxNrWGjqjuvhA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\videos\\1ff9552b-8d1e-4ca5-ab32-2149e314f901.mp4"
+    },
+    {
+      "Identity": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\5855933e-05c6-46bc-b2a6-1d5001fc6305.mp4",
+      "SourceId": "News_Web_App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\",
+      "BasePath": "_content/News_Web_App",
+      "RelativePath": "uploads/videos/5855933e-05c6-46bc-b2a6-1d5001fc6305#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "77fhinuynw",
+      "Integrity": "M9Xd/T1eCLZqCtEShMe01EgnDcsJ7mlDOI28WhAfBMs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\videos\\5855933e-05c6-46bc-b2a6-1d5001fc6305.mp4"
+    },
+    {
       "Identity": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\74b66d18-a248-48a3-919b-12499d3a7fd9.mp4",
       "SourceId": "News_Web_App",
       "SourceType": "Discovered",
@@ -5979,6 +6021,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\videos\\8189172b-51cc-40cf-aed1-4d43eb214d23.mp4"
+    },
+    {
+      "Identity": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\c86f75df-c3b4-45ae-906b-9b5fb97643fa.mp4",
+      "SourceId": "News_Web_App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\",
+      "BasePath": "_content/News_Web_App",
+      "RelativePath": "uploads/videos/c86f75df-c3b4-45ae-906b-9b5fb97643fa#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "77fhinuynw",
+      "Integrity": "M9Xd/T1eCLZqCtEShMe01EgnDcsJ7mlDOI28WhAfBMs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\videos\\c86f75df-c3b4-45ae-906b-9b5fb97643fa.mp4"
     }
   ],
   "Endpoints": [
@@ -39419,6 +39482,170 @@
       ]
     },
     {
+      "Route": "uploads/videos/1ff9552b-8d1e-4ca5-ab32-2149e314f901.g0wh4dit4z.mp4",
+      "AssetFile": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\1ff9552b-8d1e-4ca5-ab32-2149e314f901.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3356494"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sAumFrzHKqiWmraEBkkPv9/sx6GB1UgxNrWGjqjuvhA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 16:30:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g0wh4dit4z"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/videos/1ff9552b-8d1e-4ca5-ab32-2149e314f901.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sAumFrzHKqiWmraEBkkPv9/sx6GB1UgxNrWGjqjuvhA="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/videos/1ff9552b-8d1e-4ca5-ab32-2149e314f901.mp4",
+      "AssetFile": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\1ff9552b-8d1e-4ca5-ab32-2149e314f901.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3356494"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sAumFrzHKqiWmraEBkkPv9/sx6GB1UgxNrWGjqjuvhA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 16:30:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sAumFrzHKqiWmraEBkkPv9/sx6GB1UgxNrWGjqjuvhA="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/videos/5855933e-05c6-46bc-b2a6-1d5001fc6305.77fhinuynw.mp4",
+      "AssetFile": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\5855933e-05c6-46bc-b2a6-1d5001fc6305.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47682956"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M9Xd/T1eCLZqCtEShMe01EgnDcsJ7mlDOI28WhAfBMs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 16:06:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "77fhinuynw"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/videos/5855933e-05c6-46bc-b2a6-1d5001fc6305.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-M9Xd/T1eCLZqCtEShMe01EgnDcsJ7mlDOI28WhAfBMs="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/videos/5855933e-05c6-46bc-b2a6-1d5001fc6305.mp4",
+      "AssetFile": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\5855933e-05c6-46bc-b2a6-1d5001fc6305.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47682956"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M9Xd/T1eCLZqCtEShMe01EgnDcsJ7mlDOI28WhAfBMs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 16:06:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-M9Xd/T1eCLZqCtEShMe01EgnDcsJ7mlDOI28WhAfBMs="
+        }
+      ]
+    },
+    {
       "Route": "uploads/videos/74b66d18-a248-48a3-919b-12499d3a7fd9.mp4",
       "AssetFile": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\74b66d18-a248-48a3-919b-12499d3a7fd9.mp4",
       "Selectors": [],
@@ -39661,6 +39888,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-IgNu2DC00S3TqlP39qYche5JOgKo/6es1ld8MUd8dj8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/videos/c86f75df-c3b4-45ae-906b-9b5fb97643fa.77fhinuynw.mp4",
+      "AssetFile": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\c86f75df-c3b4-45ae-906b-9b5fb97643fa.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47682956"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M9Xd/T1eCLZqCtEShMe01EgnDcsJ7mlDOI28WhAfBMs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 16:18:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "77fhinuynw"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/videos/c86f75df-c3b4-45ae-906b-9b5fb97643fa.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-M9Xd/T1eCLZqCtEShMe01EgnDcsJ7mlDOI28WhAfBMs="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/videos/c86f75df-c3b4-45ae-906b-9b5fb97643fa.mp4",
+      "AssetFile": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\c86f75df-c3b4-45ae-906b-9b5fb97643fa.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47682956"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M9Xd/T1eCLZqCtEShMe01EgnDcsJ7mlDOI28WhAfBMs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 16:18:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-M9Xd/T1eCLZqCtEShMe01EgnDcsJ7mlDOI28WhAfBMs="
         }
       ]
     }
