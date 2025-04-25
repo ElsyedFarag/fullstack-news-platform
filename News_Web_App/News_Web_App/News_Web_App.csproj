@@ -32,4 +32,8 @@
     <ProjectReference Include="..\News_Models\News_Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\uploads\" />
+  </ItemGroup>
+
 </Project>

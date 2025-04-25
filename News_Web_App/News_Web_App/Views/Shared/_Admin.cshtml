@@ -59,6 +59,8 @@
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <partial name="PartialToster" />
 
@@ -104,7 +106,6 @@
                             <span class="navbar-badge badge text-bg-danger" id="messageCountHeader"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end" id="messagesDropdownMenu" data-bs-popper="static">
-
                         </div>
                     </li>
 
@@ -118,9 +119,6 @@
                             <span class="navbar-badge badge text-bg-warning" id="messageCount"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end" id="messageDropMenu">
-
-
-                          
                         </div>
                     </li>
                     <!--end::Messages Dropdown-->
@@ -277,15 +275,9 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/Admin/Comment" class="nav-link">
-                                        <i class="nav-icon bi bi-chat-dots"></i> <!-- أيقونة الرسائل -->
-                                        <p>Comments</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="/Admin/Message" class="nav-link">
-                                        <i class="nav-icon bi bi-envelope-fill"></i> <!-- أيقونة الرسائل -->
-                                        <p>Messages</p>
+                                    <a href="/Admin/Notificaton" class="nav-link">
+                                        <i class="nav-icon bi bi-bell-fill"></i> <!-- أيقونة الرسائل -->
+                                        <p>Notificatons</p>
                                     </a>
                                 </li>
                             </ul>
@@ -320,137 +312,165 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.0/signalr.min.js"></script>
     <script>
+        // ✅ الاتصال بـ SignalR
         const connection = new signalR.HubConnectionBuilder()
             .withUrl("/notificationHub")
             .build();
-           
+
+        // ✅ استقبال إشعار جديد
         connection.on("ReceiveNotification", function (message) {
             const sound = document.getElementById("notificationSound");
             if (sound) sound.play();
 
-            // ✅ تحديث البادج
             const badge = document.querySelector(".navbar-badge");
             const currentCount = parseInt(badge.innerText) || 0;
             badge.innerText = currentCount + 1;
             badge.style.display = "inline-block";
 
-            // ✅ إضافة الرسالة الجديدة في أعلى القائمة
             const menu = document.getElementById("messagesDropdownMenu");
-            const newItem = createMessageItem(message);
+            const newItem = createMessageItem(message, message.status);
             menu.insertBefore(newItem, menu.firstChild);
-
-            
-
         });
 
         connection.start().catch(err => console.error(err.toString()));
     </script>
 
     <script>
-        // ✅ دالة لإنشاء عنصر رسالة
-        function createMessageItem(message) {
+        // ✅ دالة لإنشاء عنصر رسالة أو تعليق
+        function createMessageItem(message, typeValue) {
             const messageItem = document.createElement("div");
 
             let content = message.content || '';
             if (content.length > 50) {
                 let trimmed = content.substring(0, 50);
-                let lastSpace = trimmed.lastIndexOf(" ");
-                if (lastSpace > 0) {
-                    trimmed = trimmed.substring(0, lastSpace);
-                }
+                trimmed = trimmed.substring(0, trimmed.lastIndexOf(" "));
                 content = "..." + trimmed;
             }
 
+            const isComment = typeValue === "comment";
+            const authorOrSender =  message.author;
+            const actionText = isComment ? "قام بالتعليق" : "قام بإرسال رسالة";
+            const link = isComment
+                ? `/Home/Details/${message.newsId}#comment-${message.id}`
+                : `/Admin/Message?id=${message.id}&filter=Unread`;
+
+            const timestamp = message.createdAt || message.created || message.timeAgo;
+
             messageItem.innerHTML = `
                 <div class="dropdown-divider"></div>
-                <a href="/Admin/Message?id=${message.id}&filter=Unread" class="dropdown-item">
+                <a href="${link}" class="dropdown-item" ${isComment ? `onclick="ReadComment(${message.id})"` : ""}>
                     <div class="d-flex">
                         <div class="flex-grow-1">
-                            <h3 class="dropdown-item-title d-flex justify-content-between">
-                                <span class="float-start fs-7 text-danger">
-                                    <i class="bi bi-star-fill"></i>
-                                </span>
-                                <span>${message.name+ ' '+ message.status}</span>
+                            <h3 class="dropdown-item-title d-flex justify-content-between align-items-center">
+                                <span class="text-danger fs-7"><i class="bi bi-star-fill"></i></span>
+                                <span class="ms-2">${authorOrSender} ${actionText}</span>
                             </h3>
-                            <p class="fs-7 text-end">${content}</p>
-                            <p class="fs-7 text-secondary text-end">${message.created || message.timeAgo} <i class="bi bi-clock-fill ms-1"></i></p>
+                            <p class="fs-7 text-end mb-1">${content}</p>
+                            <p class="fs-7 text-secondary text-end mb-0">
+                                ${timestamp} <i class="bi bi-clock-fill ms-1"></i>
+                            </p>
                         </div>
                     </div>
                 </a>
-             
             `;
+
             return messageItem;
         }
 
-        // ✅ جلب البيانات عند تحميل الصفحة
+        // ✅ قراءة تعليق
+        function ReadComment(id) {
+            $.ajax({
+                url: `/Admin/ReadComment/${id}`,
+                type: "GET",
+                success: function (data) {
+                    if (!data.success) {
+                        console.log(data.message);
+                    }
+                },
+                error: function () {
+                    toastr.error("حدث خطأ أثناء معالجة الطلب.");
+                }
+            });
+        }
+
+        // ✅ تحميل البيانات عند فتح الصفحة
         fetch('/Admin/GetMessagesAndComments')
             .then(response => response.json())
             .then(data => {
                 const { countMesaage, countComments, allMessage, allComments } = data;
                 const totalNotifications = countMesaage + countComments;
 
-                // ✅ تحديث عداد التنبيهات
-                const badge = document.querySelector(".navbar-badge");
-                badge.innerText = countMesaage;
-                badge.style.display = "inline-block";
+                // ✅ تحديث البادجات
+                document.querySelector(".navbar-badge").innerText = countMesaage;
+                document.querySelector(".navbar-badge").style.display = "inline-block";
 
-                 // ✅ تحديث عداد التنبيهات
                 const badge2 = document.getElementById("messageCount");
                 badge2.innerText = totalNotifications;
                 badge2.style.display = "inline-block";
-                // ✅ تحديث القائمة العلوية للتنبيهات المختصرة
-                const drpMessage = document.getElementById("messageDropMenu");
-                drpMessage.innerHTML = `
-                    <span class="dropdown-item dropdown-header">${totalNotifications} Notifications</span>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item d-flex justify-content-between align-items-start">
-                        <div>
-                            <i class="bi bi-envelope me-2"></i>
-                            <span>${countMesaage} new notifications</span>
-                        </div>
-                        <span class="text-secondary fs-7">${allMessage[0]?.created || ''}</span>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item d-flex justify-content-between align-items-start">
-                        <div>
-                            <i class="bi bi-chat-dots me-2"></i>
-                            <span>${countComments} new comments</span>
-                        </div>
-                        <span class="text-secondary fs-7">${allComments[0]?.createdAt || ''}</span>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-                `;
 
-                // ✅ إدخال الرسائل في القائمة
+                // ✅ عرض الإشعارات المختصرة
+                const drpMessage = document.getElementById("messageDropMenu");
+                     drpMessage.innerHTML = `
+           <span class="dropdown-item dropdown-header">${totalNotifications} Notifications</span>
+           <div class="dropdown-divider"></div>
+           <a href="#" class="dropdown-item d-flex justify-content-between align-items-start">
+               <div>
+                   <i class="bi bi-envelope me-2"></i>
+                   <span>${countMesaage} new notifications</span>
+               </div>
+               <span class="text-secondary fs-7">${allMessage[0]?.created || ''}</span>
+           </a>
+           <div class="dropdown-divider"></div>
+           <a href="#" class="dropdown-item d-flex justify-content-between align-items-start" id="commentsLink">
+               <div>
+                   <i class="bi bi-chat-dots me-2"></i>
+                   <span>${countComments} new comments</span>
+               </div>
+               <span class="text-secondary fs-7">${allComments[0]?.createdAt || ''}</span>
+           </a>
+           <div class="dropdown-divider"></div>
+        
+        `;
+
+
+
+                // ✅ عرض الرسائل والتعليقات في القائمة
                 const menu = document.getElementById("messagesDropdownMenu");
                 const viewAllLink = menu.querySelector(".dropdown-footer");
 
                 allMessage.forEach(msg => {
-                    const item = createMessageItem(msg);
+                    const item = createMessageItem(msg, "message");
                     menu.insertBefore(item, viewAllLink);
                 });
-                const divDowen = document.createElement("div")
-                divDowen.className = "dropdown-divider";
-                              
+
+                allComments.forEach(msg => {
+                    const item = createMessageItem(msg, "comment");
+                    menu.insertBefore(item, viewAllLink);
+                });
+
+                // ✅ رابط عرض الكل
+                const divDown = document.createElement("div");
+                divDown.className = "dropdown-divider";
 
                 const viewAll = document.createElement("a");
-                viewAll.href = "/Admin/Message?filter=Unread";
+                viewAll.href = "/Admin/Notificaton?status=unread";
                 viewAll.className = "dropdown-item dropdown-footer";
-                viewAll.innerText = "عرض جميع الرسائل";
-                menu.appendChild(divDowen);
-                menu.appendChild(viewAll);
+                viewAll.innerText = "عرض الجميع ";
 
+                menu.appendChild(divDown);
+                menu.appendChild(viewAll);
             })
             .catch(error => {
                 console.error("فشل في تحميل الرسائل:", error);
             });
     </script>
 
+
     <script src="//code.jquery.com/jquery-3.5.1.js"></script>
     <script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/browser/overlayscrollbars.browser.es6.min.js"
             integrity="sha256-dghWARbRe2eLlIJ56wNB+b760ywulqK3DzZYEpsg2fQ="

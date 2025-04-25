@@ -18,7 +18,7 @@ namespace News_Models.Model
         [Required(ErrorMessage = "الرسالة مطلوبة")]
         [StringLength(500, ErrorMessage = "يجب ألا تزيد الرسالة عن 500 حرف")]
         public string Content { get; set; }
-        public DateTime Created { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime Updated { get;  set; } = DateTime.UtcNow;
 
         public MessageStatus Status { get; set; } = MessageStatus.UnRead;

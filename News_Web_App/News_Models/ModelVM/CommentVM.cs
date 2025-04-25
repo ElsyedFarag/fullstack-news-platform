@@ -14,6 +14,6 @@ namespace News_Models.ModelVM
         public string Author { get; set; }
         public string Content { get; set; }
         public string CreatedAt { get; set; } 
-        public MessageStatus Status { get; set; } = MessageStatus.UnRead;
+        public string Status { get; set; }
     }
 }

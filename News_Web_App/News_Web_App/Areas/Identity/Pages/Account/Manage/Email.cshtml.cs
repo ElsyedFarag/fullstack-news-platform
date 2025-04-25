@@ -101,7 +101,7 @@ namespace News_Web_App.Areas.Identity.Pages.Account.Manage
             var messages = _unitOfWork.GetRepository<Message>()
                                            .GetAllAsync(x => x.Status == MessageStatus.UnRead).Result;
 
-            messages = messages.OrderByDescending(x => x.Created);
+            messages = messages.OrderByDescending(x => x.CreatedAt);
             // إعداد بيانات العرض
             ViewData["Message"] = messages?.Take(3).ToList()?? new List<Message>();
             ViewData["MessageCount"] = messages?.Count() ?? 0;

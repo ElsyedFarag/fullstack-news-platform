@@ -1441,7 +1441,6 @@ C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Web_App\o
 C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Web_App\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.News_Web_App.props
 C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Web_App\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.News_Web_App.props
 C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Web_App\obj\Debug\net9.0\staticwebassets.pack.json
-C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Web_App\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Web_App\obj\Debug\net9.0\News_Web.FB405086.Up2Date
 C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Web_App\obj\Debug\net9.0\News_Web_App.dll
 C:\Users\win 11\source\repos\fullstack-news-platform\News_Web_App\News_Web_App\obj\Debug\net9.0\refint\News_Web_App.dll

@@ -8,6 +8,7 @@ namespace News_Models.ModelVM
 {
     public class CommentViewModel
     {
+        public int Id { get; set; }
         public int NewsId { get; set; }
         public string Author { get; set; }
         public string Content { get; set; }

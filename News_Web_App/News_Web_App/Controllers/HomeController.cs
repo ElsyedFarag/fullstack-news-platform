@@ -111,7 +111,7 @@ namespace News_Web_App.Controllers
             if (news.Likes > 0)
             {
                 news.Likes--;
-               await _unitOfWork.SaveChangesAsync();
+                await _unitOfWork.SaveChangesAsync();
             }
 
             return Json(new { success = true, likes = news.Likes });
@@ -119,6 +119,7 @@ namespace News_Web_App.Controllers
         [HttpPost]
         public async Task<IActionResult> AddComment([FromBody] CommentViewModel commentModel)
         {
+            var comments = await _unitOfWork.GetRepository<Comment>().GetAllAsync();
             if (commentModel == null || !ModelState.IsValid)
             {
                 return Json(new { success = false });
@@ -135,34 +136,55 @@ namespace News_Web_App.Controllers
             };
 
             await _unitOfWork.GetRepository<Comment>().AddAsync(commentNew);
+
             await _unitOfWork.SaveChangesAsync();
 
-            var comments = await _unitOfWork.GetRepository<Comment>().GetAllAsync();
+            // ≈⁄«œ…  Õ„Ì· «· ⁄·Ìﬁ «·ÃœÌœ ··Õ’Ê· ⁄·Ï «·‹ Id «·„Œ’’ ·Â »⁄œ «·Õ›Ÿ
+            var commentId = commentNew.Id;
 
+            // «·Õ’Ê· ⁄·Ï ⁄œœ «· ⁄·Ìﬁ«  «·„ ⁄·ﬁ… »‰›” «·Œ»—
             var commentCount = comments.Count(x => x.NewsId == commentModel.NewsId);
-            var comment = new
+
+            var formattedComment = new
             {
+                Id = commentId,
                 Author = commentModel.Author,
                 Content = commentModel.Content,
                 CreatedAt = now.ToString("dd MMMM yyyy", new CultureInfo("ar-AE")),
                 CountComment = commentCount
             };
+
+            // ≈—”«· «·≈‘⁄«— ≈·Ï Ã„Ì⁄ «·„” Œœ„Ì‰
             await hubContext.Clients.All.SendAsync("ReceiveNotification", new
             {
-               id = 0,
-               name =   commentModel.Author,
-               content = commentModel.Content,
-               timeAgo = now.TimeAgo(),
-               status = "ﬁ«„ »«· ⁄·Ìﬁ ⁄·Ï „‰‘Ê—"
+                Id = commentId,
+                NewsId = commentModel.NewsId,
+                author = commentModel.Author,
+                content = commentModel.Content,
+                timeAgo = now.TimeAgo(),
+                status = "comment"
             });
+
             return Json(new
             {
                 success = true,
-                comment = comment
+                comment = formattedComment
             });
         }
 
+        [HttpDelete]
+        public async Task<IActionResult> RemoveComment(int? id)
+        {
+            var comment = await _unitOfWork.GetRepository<Comment>().GetByIdAsync(id!);
+            if (comment != null)
+            {
+                await _unitOfWork.GetRepository<Comment>().DeleteAsync(comment);
+                await _unitOfWork.SaveChangesAsync();
+                return Json(new { success = true, message = " „ Õ–› «· ⁄·Ìﬁ »‰Ã«Õ" });
+            } 
+            return Json(new { success = false, message = "«· ⁄·Ìﬁ €Ì— „ÊÃÊœ" });
 
+        }
 
         public async Task<IActionResult> Contact()
         {
@@ -187,16 +209,16 @@ namespace News_Web_App.Controllers
 
             try
             {
-                collection.Created = DateTime.Now;
+                collection.CreatedAt = DateTime.Now;
                 await _unitOfWork.GetRepository<Message>().AddAsync(collection);
                 await _unitOfWork.SaveChangesAsync();
                 await hubContext.Clients.All.SendAsync("ReceiveNotification", new
                 {
                     id = collection.Id,
-                    name = collection.Name,
+                    author = collection.Name,
                     content = collection.Content,
-                    timeAgo = collection.Created.TimeAgo(),
-                    status = "ﬁ«„ »«—”«· —”«·…"
+                    timeAgo = collection.CreatedAt.TimeAgo(),
+                    status = "message"
                     // „À·«: „‰– œﬁÌﬁ…
                 });
                 TempData["SuccessMessage"] = " „ ≈—”«· «·—”«·… »‰Ã«Õ!";
@@ -244,6 +266,10 @@ namespace News_Web_App.Controllers
         {
             // «Õ÷«— »Ì«‰«  «·≈⁄œ«œ«  „‰ ﬁ«⁄œ… «·»Ì«‰« 
             var detailsSetting = _unitOfWork.GetRepository<Settings>().GetAllAsync().GetAwaiter().GetResult().FirstOrDefault();
+            
+             var news   = _unitOfWork.GetRepository<News>().GetAllAsync().GetAwaiter().GetResult();
+             var visitors = news.Select(x => x.ViewCount).Sum();
+             var newsCount = news.Count();
 
             if (detailsSetting?.Logo != null && detailsSetting.Logo.Length > 0)
             {
@@ -253,6 +279,8 @@ namespace News_Web_App.Controllers
             {
                 ViewData["logo"] = null; // √Ê ’Ê—… «› —«÷Ì…
             }
+            ViewData["visitors"] = visitors;
+            ViewData["newsCount"] = newsCount;
             ViewData["titleSite"] = detailsSetting?.Title;
             ViewData["facebook"] = detailsSetting?.Facebook;
             ViewData["instagram"] = detailsSetting?.Instagram;

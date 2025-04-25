@@ -98,7 +98,7 @@
                                     </div>
                                     <div class="mb-3">
                                         <h5><i class="fas fa-calendar-alt"></i> تاريخ الإنشاء</h5>
-                                        <p class="text-muted">@Model.Created</p>
+                                        <p class="text-muted">@Model.CreatedAt</p>
                                     </div>
                                     <div class="mb-3">
                                         <h5><i class="fas fa-calendar-check"></i> تاريخ التحديث</h5>
@@ -110,7 +110,6 @@
                         <!-- /.card-body -->
                         <div class="card-footer">
                             <a asp-action="MessageEdit" asp-route-id="@Model.Id" class="btn btn-primary"><i class="fas fa-edit"></i> تعديل</a>
-                            <a asp-action="Message" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> العودة إلى القائمة</a>
                         </div>
                     </div>
                     <!-- /.card -->

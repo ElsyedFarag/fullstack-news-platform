@@ -99,16 +99,16 @@
                 <h2 style="text-align: center;">إحصائياتنا</h2>
                 <div class="stats-section">
                     <div class="stat-box">
-                        <h3>10+</h3>
+                        <h3>@(DateTime.Now.Year - 2024)+</h3>
                         <p>سنوات من الخبرة</p>
                     </div>
                     <div class="stat-box">
-                        <h3>500+</h3>
-                        <p>مقالة منشورة</p>
+                <h3>@ViewData["newsCount"]+</h3>
+                        <p>خبر منشورة</p>
                     </div>
                     <div class="stat-box">
-                        <h3>1M+</h3>
-                        <p>قارئ شهريًا</p>
+                <h3>@ViewData["visitors"]+</h3>
+                        <p>قارئ</p>
                     </div>
                 </div>
             </div>

@@ -108,10 +108,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/win 11/source/repos/fullstack-news-platform/News_Web_App/News_Web_App/Views/Admin/Comment.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ29tbWVudC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/win 11/source/repos/fullstack-news-platform/News_Web_App/News_Web_App/Views/Admin/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -132,16 +128,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/win 11/source/repos/fullstack-news-platform/News_Web_App/News_Web_App/Views/Admin/Message.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWVzc2FnZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/win 11/source/repos/fullstack-news-platform/News_Web_App/News_Web_App/Views/Admin/MessageDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWVzc2FnZURldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/win 11/source/repos/fullstack-news-platform/News_Web_App/News_Web_App/Views/Admin/MessageEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWVzc2FnZUVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/win 11/source/repos/fullstack-news-platform/News_Web_App/News_Web_App/Views/Admin/Notificaton.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTm90aWZpY2F0b24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/win 11/source/repos/fullstack-news-platform/News_Web_App/News_Web_App/Views/Admin/Setting.cshtml]

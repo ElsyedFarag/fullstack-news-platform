@@ -317,42 +317,6 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
     },
     {
-      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\06ebedaf-cb0f-4952-8b21-9de668f3e888.mp4",
-      "PackagePath": "staticwebassets\\uploads\\videos\\06ebedaf-cb0f-4952-8b21-9de668f3e888.mp4"
-    },
-    {
-      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\0c413670-a433-4c82-a835-76e8a53f5d77.mp4",
-      "PackagePath": "staticwebassets\\uploads\\videos\\0c413670-a433-4c82-a835-76e8a53f5d77.mp4"
-    },
-    {
-      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\1f8f53a7-6559-4fc4-8089-3b6a6664e603.mp4",
-      "PackagePath": "staticwebassets\\uploads\\videos\\1f8f53a7-6559-4fc4-8089-3b6a6664e603.mp4"
-    },
-    {
-      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\1ff9552b-8d1e-4ca5-ab32-2149e314f901.mp4",
-      "PackagePath": "staticwebassets\\uploads\\videos\\1ff9552b-8d1e-4ca5-ab32-2149e314f901.mp4"
-    },
-    {
-      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\5855933e-05c6-46bc-b2a6-1d5001fc6305.mp4",
-      "PackagePath": "staticwebassets\\uploads\\videos\\5855933e-05c6-46bc-b2a6-1d5001fc6305.mp4"
-    },
-    {
-      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\74b66d18-a248-48a3-919b-12499d3a7fd9.mp4",
-      "PackagePath": "staticwebassets\\uploads\\videos\\74b66d18-a248-48a3-919b-12499d3a7fd9.mp4"
-    },
-    {
-      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\767c65c4-fcce-45cc-bf36-4e6ce3fa292d.mp4",
-      "PackagePath": "staticwebassets\\uploads\\videos\\767c65c4-fcce-45cc-bf36-4e6ce3fa292d.mp4"
-    },
-    {
-      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\8189172b-51cc-40cf-aed1-4d43eb214d23.mp4",
-      "PackagePath": "staticwebassets\\uploads\\videos\\8189172b-51cc-40cf-aed1-4d43eb214d23.mp4"
-    },
-    {
-      "Id": "C:\\Users\\win 11\\source\\repos\\fullstack-news-platform\\News_Web_App\\News_Web_App\\wwwroot\\uploads\\videos\\c86f75df-c3b4-45ae-906b-9b5fb97643fa.mp4",
-      "PackagePath": "staticwebassets\\uploads\\videos\\c86f75df-c3b4-45ae-906b-9b5fb97643fa.mp4"
-    },
-    {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.News_Web_App.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

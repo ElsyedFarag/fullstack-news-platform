@@ -199,20 +199,19 @@ namespace News_Web_App.Controllers
             var messages = _unitOfWork.GetRepository<Message>()
                                            .GetAllAsync(x => x.Status == MessageStatus.UnRead).Result;
             var comments = _unitOfWork.GetRepository<Comment>().GetAllAsync(x => x.Status == MessageStatus.UnRead).Result;
-            messages = messages.OrderByDescending(x => x.Created);
+            messages = messages.OrderByDescending(x => x.CreatedAt);
             var allMessage = messages?
                 .Select(m => new MassegeVM
                 {
                     Id = m.Id,
-                    Name = m.Name,
+                    Author = m.Name,
                     Content = m.Content,
-                    Created = m.Created.ToUniversalTime().TimeAgo()
-                })
-                .Take(3)
-                .ToList();
+                    Created = m.CreatedAt.ToUniversalTime().TimeAgo(),
+                    Status = "message"
+                });
 
             comments = comments.OrderByDescending(x => x.CreatedAt);
-            var allComments= comments?
+            var allComments = comments?
                 .Select(m => new CommentVM
                 {
                     Id = m.Id,
@@ -220,11 +219,13 @@ namespace News_Web_App.Controllers
                     NewsId = m.NewsId,
                     Content = m.Content,
                     Author = m.Author,
-                    Status = m.Status,
-                })
-                .Take(3)
-                .ToList();
-
+                    Status = "comment",
+                });
+            if((allComments.Count() + allMessage.Count()) > 3)
+            {
+                allMessage = allMessage.Take(2).ToList();
+                allComments = allComments.Take(1).ToList();
+            }
             var countMesaage = messages?.Count() ?? 0;
             var countComments = comments?.Count() ?? 0;
             var data = new
@@ -236,6 +237,25 @@ namespace News_Web_App.Controllers
 
             };
             return Ok(data);
+        }
+
+
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> ReadComment(int? id)
+        {
+            var comment = await _unitOfWork.GetRepository<Comment>().GetByIdAsync(id!);
+            if (comment != null)
+            {
+                comment.Status = MessageStatus.Read;
+                await _unitOfWork.SaveChangesAsync();
+                return Json(new { success = true , message = "تم" });
+                
+            }
+            return Json(new { success = true , message = "لم يتم" });
+            
         }
 
         [Authorize(Roles = $"{RoleConst.AdminRole},{RoleConst.AdminHelper}")]
@@ -508,8 +528,7 @@ namespace News_Web_App.Controllers
             }
         }
 
-        [Authorize(Roles = RoleConst.AdminRole)]
-        [Authorize(Roles = RoleConst.Editor)]
+   
 
         [HttpPost]
         public async Task<IActionResult> Reply(int id, string replyContent)
@@ -545,10 +564,61 @@ namespace News_Web_App.Controllers
             }
         }
 
-        public async Task<IActionResult> Comment()
+        public async Task<IActionResult> Notificaton(string? filter, int? Page,string? status)
         {
-            var comments = await _unitOfWork.GetRepository<Comment>().GetAllAsync();
-            return View(comments);
+            var pageNumber = Page ?? 1;
+            var pageSize = 10;
+            var commentRepo = await _unitOfWork.GetRepository<Comment>().GetAllAsync();
+            var messageRepo = await _unitOfWork.GetRepository<Message>().GetAllAsync();
+            if (!string.IsNullOrEmpty(status))
+            {
+
+                switch (status)
+                {
+                    case "read":
+                        commentRepo = commentRepo.Where(x => x.Status == MessageStatus.Read);
+                        messageRepo = messageRepo.Where(x=>x.Status == MessageStatus.Read);
+                        break;
+
+                    case "unread":
+                        commentRepo = commentRepo.Where(x => x.Status == MessageStatus.UnRead);
+                        messageRepo = messageRepo.Where(x => x.Status == MessageStatus.UnRead); 
+                        break;
+
+                    default:
+                         commentRepo =commentRepo.ToList();
+                         messageRepo =messageRepo.ToList();
+                        break;
+                }
+
+            }
+     
+
+            var comments =  commentRepo.OrderByDescending(c => c.CreatedAt);
+            var messages = messageRepo.OrderByDescending(m => m.CreatedAt);
+
+            List<object> result;
+
+            switch (filter)
+            {
+                case "comments":
+                    result = comments.Cast<object>().ToList();
+                    break;
+
+                case "messages":
+                    result = messages.Cast<object>().ToList();
+                    break;
+
+                default:
+                    result = comments.Cast<object>()
+                             .Concat(messages.Cast<object>())
+                             .OrderByDescending(n => ((dynamic)n).CreatedAt)
+                             .ToList();
+                    break;
+            }
+
+        
+            return View(result.ToPagedList(pageNumber, pageSize));
         }
 
         public async Task<IActionResult> DeleteComment(int id)
@@ -608,12 +678,12 @@ namespace News_Web_App.Controllers
 
             if (newsItem == null)
             {
-                return Json(new { success = false, message = "الخبر غير موجود" });
+                return Json(new { success = false, message = "الرسالة غير موجود" });
             }
 
             await _unitOfWork.GetRepository<Message>().DeleteAsync(newsItem);
             await _unitOfWork.SaveChangesAsync();
-            return Json(new { success = true, message = "تم حذف الخبر بنجاح" });
+            return Json(new { success = true, message = "تم حذف الرسالة بنجاح" });
         }
 
     }
